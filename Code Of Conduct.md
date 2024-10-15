@@ -1,26 +1,35 @@
 Code of Conduct
+
 Effective Date: 10/10/24
+
 Purpose:
 This code of conduct establishes the standards for behavior and collaboration within our Scrum team. This code is design to promote a positive, productive, and respectful working environment where all team members can contribute effectively to the success of our project.
 
 I. Participation as a Team Member
-Prioritize Deliverables
-Deliver your assigned work on time and to the best of your ability. Meeting your commitments is our highest priority.
-Engage in Code Reviews
-Actively participate in team code review sessions. Providing and receiving feedback enhances the quality of our codebase.
-Punctuality
-Be on time for all team meetings s. Respecting each other's time is crucial for team efficiency.
-Collaborative Decision-Making
-Consult with the team before making major decisions, such as merging to the master or release branches. Collective input leads to better outcomes.
-Maintain Project Artifacts
-Ensure the backlog and sprint tasks are always up to date. Keeping our project management tools current helps everyone stay aligned.
-Meeting Etiquette
-During meetings, minimize distractions:
-Silence your phone and avoid using it unless necessary.
-Mute your microphone when not speaking to reduce background noise.
-Give full attention to whoever is speaking.
-Communication of Delays
-If you cannot meet a deadline or backlog item, communicate promptly with other team members to adjust plans accordingly.
+
+1.  Prioritize Deliverables
+    Deliver your assigned work on time and to the best of your ability. Meeting your commitments is our highest priority.
+    
+2.  Engage in Code Reviews
+    Actively participate in team code review sessions. Providing and receiving feedback enhances the quality of our codebase.
+
+3.  Punctuality
+    Be on time for all team meetings s. Respecting each other's time is crucial for team efficiency.
+
+4.  Collaborative Decision-Making
+    Consult with the team before making major decisions, such as merging to the master or release branches. Collective input leads to better     outcomes.
+
+5.  Maintain Project Artifacts
+    Ensure the backlog and sprint tasks are always up to date. Keeping our project management tools current helps everyone stay aligned.
+
+6.  Meeting Etiquette
+    During meetings, minimize distractions:
+    Silence your phone and avoid using it unless necessary.
+    Mute your microphone when not speaking to reduce background noise.
+    Give full attention to whoever is speaking.
+
+7.  Communication of Delays
+    If you cannot meet a deadline or backlog item, communicate promptly with other team members to adjust plans accordingly.
 
 II. Professionalism
 Accountability
