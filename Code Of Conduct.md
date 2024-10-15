@@ -90,10 +90,13 @@ While we expect all team members to adhere to this code of conduct, occasional l
 6. Storytime
    Share a brief, funny, and appropriate anecdote or story at the next meeting to entertain and engage the team.
 
-Agreement
+
+Agreement:
+
 By participating in this project, each team member agrees to uphold the guidelines outlined in this code of conduct. We commit to fostering a collaborative, respectful, and productive team environment.
 
 Team Members:
+
 Brenda Coc
 Larissa Pascascio
 Manuelito Aragon
