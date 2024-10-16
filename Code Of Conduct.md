@@ -76,7 +76,7 @@ IV. Consequences of Violating the Code of Conduct
 While we expect all team members to adhere to this code of conduct, occasional lapses may occur. To promote accountability in a lighthearted and engaging manner, the following fun penalties may be applied for minor violations:
 
 1. Snack Provider Duty
-    The team member will bring snacks or treats for everyone at the next team meeting (virtual or in-person). If meeting virtually,             considersending digital gift cards or arranging a group food delivery.
+    The team member will bring snacks or treats for everyone at the next team meeting (virtual or in-person). If meeting virtually,             considering digital gift cards or arranging a group food delivery.
    
 2. Virtual Background Challenge
     Use a humorous or themed virtual background (appropriate for all audiences) during the next video meeting to add a bit of fun to our        session.
@@ -87,7 +87,7 @@ While we expect all team members to adhere to this code of conduct, occasional l
 4. Meeting DJ
     Create a short playlist of instrumental background music to play softly during the next virtual work session, enhancing our                 collaborative atmosphere.
    
-5. Storytime
+5. Story time
    Share a brief, funny, and appropriate anecdote or story at the next meeting to entertain and engage the team.
 
 
