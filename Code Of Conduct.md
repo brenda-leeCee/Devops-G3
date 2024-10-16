@@ -37,25 +37,25 @@ II. Professionalism
 1.  Accountability
    Take responsibility for and fulfill any commitments you undertake, understanding and accepting the consequences of your actions.
 
-3.  Respectful Communication
+2. Respectful Communication
     Use appropriate and professional language at all times. Avoid offensive or inappropriate words that could harm team morale.
     
-5.  Stay on Topic
+3. Stay on Topic
     During team meetings, focus discussions on topics related to the task at hand. This ensures efficient use of everyone's time.
     
-7.  Value Contributions
+4. Value Contributions
     Respect and consider your fellow team members' opinions and ideas. Avoid dismissing or downgrading their input.
     
-9.  Core Ethical Values
+5. Core Ethical Values
     Demonstrate integrity, honesty, respect, responsibility, and trust in all interactions with team members.
     
-11.  Support and Collaboration
+6. Support and Collaboration
     Provide proper and useful support to fellow group members. Actively contribute to a collaborative team environment.
 
-13.  Constructive Criticism
+7. Constructive Criticism
     Deliver and receive feedback in a constructive manner. Focus on ideas and behaviors rather than personal attributes.
 
-15.  Effective Communication
+8. Effective Communication
     Actively and responsibly communicate towards the success of the project. Open dialogue enhances our team synergy.
 
 
@@ -64,10 +64,10 @@ III. Communication
 1. Timely Responses
    Respond to questions or requests for information or assistance as required. Aim to reply within 4 hours.
 
-3. Absence Notification
+2. Absence Notification
    If you will be unavailable or cannot participate as expected, provide an adequate explanation and update the absence log accordingly.
 
-4. Information Sharing
+3. Information Sharing
    Keep the team informed about your progress and any challenges you encounter. Transparency helps us support each other effectively.
 
 
@@ -78,16 +78,16 @@ While we expect all team members to adhere to this code of conduct, occasional l
 1. Snack Provider Duty
     The team member will bring snacks or treats for everyone at the next team meeting (virtual or in-person). If meeting virtually,             considersending digital gift cards or arranging a group food delivery.
    
-3. Virtual Background Challenge
+2. Virtual Background Challenge
     Use a humorous or themed virtual background (appropriate for all audiences) during the next video meeting to add a bit of fun to our        session.
    
-4. Joke of the Day
+3. Joke of the Day
    Kick off the next team meeting by sharing a clean, inclusive joke to lighten the mood and bring a smile to everyone's face.
    
-5. Meeting DJ
+4. Meeting DJ
     Create a short playlist of instrumental background music to play softly during the next virtual work session, enhancing our                 collaborative atmosphere.
    
-6. Storytime
+5. Storytime
    Share a brief, funny, and appropriate anecdote or story at the next meeting to entertain and engage the team.
 
 
