@@ -95,7 +95,7 @@ Agreement:
 
 By participating in this project, each team member agrees to uphold the guidelines outlined in this code of conduct. We commit to fostering a collaborative, respectful, and productive team environment.
 
-Team Members:
+Team Members :
 
 Brenda Coc
 Larissa Pascascio
