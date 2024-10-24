@@ -12,7 +12,7 @@ This use case describes the process of designing and implementing a system for g
 
 
 
-2. Actors:
+2. Actors :
 
 Scrum Team: Responsible for the design, development, and testing of the reporting system.
 
