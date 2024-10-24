@@ -20,7 +20,7 @@ jobs:
       - name: view logs
         run: docker logs devops-g3-app-1
       - name: Copy Output
-        run: docker container cp devops3-app-1:./tmp/output ./
+        run: docker container cp devops-g3-app-1:./tmp/output ./
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
