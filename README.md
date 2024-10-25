@@ -1,5 +1,5 @@
 # Devops-G34
-Public Repo for Group 3
+Public Repository for Group 3
 
 # DevOps
 # Software Engineering Methods
