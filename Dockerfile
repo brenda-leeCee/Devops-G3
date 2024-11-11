@@ -1,4 +1,4 @@
 FROM openjdk:latest
-COPY ./target/devops.jar.jar /tmp
+COPY ./target/airelux-1.0.0.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "devops.jar.jar"]
+ENTRYPOINT ["java", "-jar", "airelux-1.0.0.jar", "world:3306", "10000"]
