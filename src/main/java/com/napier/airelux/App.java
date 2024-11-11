@@ -88,7 +88,6 @@ public class App {
     public void generateReportBasedOnUserSelection() throws IOException {
         String reportCategoryNumber;
         int reportCategoryNum;
-        String output;
 
         int leastEntry = 1;
         int mostEntry = 5;
@@ -106,34 +105,129 @@ public class App {
 
         } while (reportCategoryNum < leastEntry || reportCategoryNum > mostEntry);
 
+        String reportOptionNumber;
+        int reportOptionNum;
+
         switch (reportCategoryNum) {
-            case 1:
-                output = "Country Report Option selected.";
-                report2("country");
+            case 1: // Country Reports
+                reportOptionNumber = JOptionPane.showInputDialog("Country Reports:\n"
+                        + "1. Countries sorted by population.\n"
+                        + "2. Filter by continent and region.\n"
+                        + "3. Top N countries based on population.");
+                reportOptionNum = Integer.parseInt(reportOptionNumber);
+                switch (reportOptionNum) {
+                    case 1:
+                        runCountryReport("sortedByPopulation");
+                        break;
+                    case 2:
+                        runCountryReport("continentRegionFilter");
+                        break;
+                    case 3:
+                        runCountryReport("topNCountries");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Invalid option for Country Reports.");
+                }
                 break;
-            case 2:
-                output = "City Report Option selected.";
-                report2("city");
+            case 2: // City Reports
+                reportOptionNumber = JOptionPane.showInputDialog("City Reports:\n"
+                        + "1. Cities sorted by population.\n"
+                        + "2. Filter by continent, region, country, and district.\n"
+                        + "3. Top N cities based on population.");
+                reportOptionNum = Integer.parseInt(reportOptionNumber);
+                switch (reportOptionNum) {
+                    case 1:
+                        runCityReport("sortedByPopulation");
+                        break;
+                    case 2:
+                        runCityReport("filteredCities");
+                        break;
+                    case 3:
+                        runCityReport("topNCities");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Invalid option for City Reports.");
+                }
                 break;
-            case 3:
-                output = "Capital City Report Option selected.";
-                report2("capital_city");
+            case 3: // Capital City Reports
+                reportOptionNumber = JOptionPane.showInputDialog("Capital City Reports:\n"
+                        + "1. Capital cities sorted by population.\n"
+                        + "2. Filter by continent and region.\n"
+                        + "3. Top N capital cities by population.");
+                reportOptionNum = Integer.parseInt(reportOptionNumber);
+                switch (reportOptionNum) {
+                    case 1:
+                        runCapitalCityReport("sortedByPopulation");
+                        break;
+                    case 2:
+                        runCapitalCityReport("continentRegionFilter");
+                        break;
+                    case 3:
+                        runCapitalCityReport("topNCapitalCities");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Invalid option for Capital City Reports.");
+                }
                 break;
-            case 4:
-                output = "Population Report Option selected.";
-                report2("population");
+            case 4: // Population Reports
+                reportOptionNumber = JOptionPane.showInputDialog("Population Reports:\n"
+                        + "1. Total population and city populations by continents, regions, and countries.\n"
+                        + "2. Percentages of populations within and outside cities.");
+                reportOptionNum = Integer.parseInt(reportOptionNumber);
+                switch (reportOptionNum) {
+                    case 1:
+                        runPopulationReport("totalAndCityPopulations");
+                        break;
+                    case 2:
+                        runPopulationReport("urbanRuralPercentages");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Invalid option for Population Reports.");
+                }
                 break;
-            case 5:
-                output = "Language Report Option selected.";
-                report2("language");
+            case 5: // Language Reports
+                reportOptionNumber = JOptionPane.showInputDialog("Language Reports:\n"
+                        + "1. Population speaking each specified language.\n"
+                        + "2. Percentage of the world population speaking each language.");
+                reportOptionNum = Integer.parseInt(reportOptionNumber);
+                switch (reportOptionNum) {
+                    case 1:
+                        runLanguageReport("populationByLanguage");
+                        break;
+                    case 2:
+                        runLanguageReport("languagePopulationPercentage");
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Invalid option for Language Reports.");
+                }
                 break;
             default:
-                output = "Invalid category selected.";
+                JOptionPane.showMessageDialog(null, "Invalid category selected.");
                 break;
         }
-
-        JOptionPane.showMessageDialog(null, output);
     }
+
+    // Sample methods to execute each report type
+    public void runCountryReport(String reportType) {
+        // Implement query logic here based on reportType
+    }
+
+    public void runCityReport(String reportType) {
+        // Implement query logic here based on reportType
+    }
+
+    public void runCapitalCityReport(String reportType) {
+        // Implement query logic here based on reportType
+    }
+
+    public void runPopulationReport(String reportType) {
+        // Implement query logic here based on reportType
+    }
+
+    public void runLanguageReport(String reportType) {
+        // Implement query logic here based on reportType
+    }
+
 
     /**
      * Method to generate report based on SQL query results
