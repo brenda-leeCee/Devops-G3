@@ -6,178 +6,318 @@ Population Information Reporting System for Country, City, and Capital Data
 
 
 
-1. Description:
+Description:
 
 This use case describes the process of designing and implementing a system for generating various population reports from a pre-existing SQL database (world database). The reports will allow the organization to access and analyze population data at different geographical levels, including country, continent, region, city, and language.
 
+Use Case: Generate Country Population Report by Continent
 
+Goal
 
-2. Actors :
+To allow users to generate a report that lists countries within a selected continent, organized by population from largest to smallest.
 
-Scrum Team: Responsible for the design, development, and testing of the reporting system.
+Actors
 
-Product Owner: Defines the product backlog items (reports) and sets priorities for the Scrum team.
+User: Requests the report and specifies continent and sorting criteria.
 
-User: Requests population reports by providing filtering options such as region, continent, or top N populated areas.
+System: Processes the request, retrieves data from the database, and formats the report for display.
 
-SQL Database: The world database that contains the population data needed for generating the reports.
+Preconditions
 
-3. Preconditions:
+The SQL database is accessible and contains population data for all countries.
 
-The SQL database (world database) is accessible.
+The system’s user interface (UI) is active and allows data entry.
 
-Scrum team has knowledge of SQL queries and database structure.
+Trigger
 
-The system has a user interface (UI) for users to request and view reports.
+The user selects the "Country Population Report by Continent" option in the report generation menu and specifies a continent.
 
-4. Triggers
+Main Flow
 
-The user requests a population report through the system's user interface by specifying criteria such as continent, region, or top N populated areas.
+User Request:
 
-5. Main Flow:
+The user selects "Country Population Report by Continent" from the report menu.
 
-1. The user selects the type of report they want to generate from the following options:
+The system prompts the user to specify the continent (e.g., Africa, Asia).
 
+The user selects a continent.
 
+System Query:
 
+The system executes an SQL query to retrieve country data for the selected continent, ordered by population in descending order.
 
+Report Generation:
 
-Countries by population.
+The system formats the retrieved data according to the report structure: displaying "Country Code," "Country Name," "Continent," "Region," "Population," and "Capital."
 
-Cities by population.
+Display Results:
 
-Capital cities by population.
+The system displays the report on the UI and provides options to export it as a CSV or PDF file.
 
-Population in continents, regions, and countries.
+Alternative Flows
 
-Language speakers by population.
+No Data Found:
 
+If no data exists for the specified continent, the system displays an error message: "No data available for the selected continent."
 
+Invalid Input:
 
-2. The system displays a form allowing the user to:
+If the user does not select a continent, the system prompts them to choose one before proceeding.
 
-Select a geographical level (e.g., world, continent, region, country).
+Postconditions
 
-Provide a numerical limit (N) to return the top N populated countries, cities, or capital cities.
+The user successfully views or downloads the population report for the specified continent.
 
+Example Scenario
 
+Input: The user selects "Africa" as the continent.
 
-3. The system retrieves the required data from the SQL database by executing the appropriate SQL query:
+Expected Output: A report displaying countries in Africa ordered by population, showing each country's code, name, region, population, and capital.
 
-For countries: Select countries ordered by population from largest to smallest.
 
-For cities: Select cities ordered by population from largest to smallest.
 
-For capital cities: Select capital cities ordered by population from largest to smallest.
+Use Case: Generate Top N Populated Countries in the World
 
-For population data: Retrieve total population, city population, and non-city population for the selected geographical area.
+Goal
 
+To allow users to generate a report listing the top N populated countries in the world, based on user-specified input.
 
+Actors
 
-4. The system formats the retrieved data according to the following report types:
+User: Specifies the top N countries based on population.
 
-Country Report:
+System: Processes the request, retrieves data, and formats the report for display.
 
-Columns: Code, Name, Continent, Region, Population, Capital.
+Preconditions
 
-City Report:
+The SQL database is accessible and contains population data for all countries.
 
-Columns: Name, Country, District, Population.
+The system’s user interface (UI) is active and allows for data entry.
 
-Capital City Report:
+Trigger
 
-Columns: Name, Country, Population.
+The user selects "Top N Populated Countries in the World" from the report generation menu and specifies a value for N.
 
-Population Report:
+Main Flow
 
-Columns: Name of geographical area, Total population, Population living in cities, Population not living in cities (including %).
+User Request:
 
-5. The system displays the report on the user interface.
+The user selects "Top N Populated Countries in the World."
 
+The system prompts the user to enter a numerical value for N.
 
+The user inputs a value (e.g., 5 for the top 5 countries).
 
-6. The user can export the report in a chosen format (e.g., CSV, PDF).
+System Query:
 
+The system executes an SQL query to retrieve country data ordered by population in descending order, limiting results to the top N based on user input.
 
+Report Generation:
 
-6. Alternate Flows:
+The system formats the retrieved data according to the report structure: displaying "Country Code," "Country Name," "Continent," "Region," "Population," and "Capital."
 
-6.1 If no data is available for the selected criteria:
+Display Results:
 
-6.1.1. The system displays an error message indicating no matching data.
+The system displays the report on the UI and provides export options for CSV or PDF files.
 
-6.2 If the user requests a top N report and provides an invalid N value:
+Alternative Flows
 
-6.2.1. The system prompts the user to enter a valid number for N.
+No Data Found:
 
-6.3 If the database connection fails:
+If the database query returns no results, the system displays a message: "No data available for the specified criteria."
 
-6.3.1. The system displays an error message and logs the issue for the development team.
+Invalid Input:
 
+If the user enters a non-numeric value for N, the system prompts the user to enter a valid number.
 
+Postconditions
 
-7. Postconditions:
+The user views or downloads the report showing the top N populated countries worldwide.
 
-The requested population report is successfully displayed and available for export.
+Example Scenario
 
-The data is retrieved accurately from the SQL database and presented in the required format.
+Input: The user selects "Top N Populated Countries in the World" and inputs N = 5.
 
+Expected Output: A report showing the top 5 most populated countries, with each country's code, name, continent, region, population, and capital.
 
+Use Case: Generate City Population Report by Country
 
-8. Non-Functional Requirements:
+Goal
 
-Performance: The system should generate reports within 5 seconds for typical queries.
+To allow users to generate a report listing cities within a specified country, ordered by population from largest to smallest.
 
-Scalability: The system should handle requests for large datasets (e.g., top 100 populated cities globally).
+Actors
 
-User Interface: The UI should be intuitive and easy to navigate for users requesting reports.
+User: Requests the report by selecting a specific country.
 
-Security: The system must have appropriate access controls, ensuring that only authorized users can generate and view sensitive population data.
+System: Processes the request and retrieves the appropriate data.
 
+Preconditions
 
+The SQL database is accessible with population data for cities within each country.
 
-9. Assumptions:
+The system’s UI is active and allows data selection.
 
-The SQL database contains accurate and up-to-date population data.
+Trigger
 
-The Scrum team has access to the necessary SQL database documentation and schema.
+The user selects "City Population Report by Country" and specifies a country.
 
-Users are familiar with how to interpret and use the population data generated by the system.
+Main Flow
 
+User Request:
 
+The user selects "City Population Report by Country."
 
-10. Dependencies:
+The system prompts the user to choose a country.
 
-SQL Database: The world database is essential for retrieving population data.
+The user selects a country (e.g., "Japan").
 
-Reporting Tools: The system may rely on tools like Power BI or SSRS for advanced reporting and data visualization.
+System Query:
 
-UI Framework: A user-friendly interface is needed for report generation and display.
+The system executes an SQL query to retrieve city data within the specified country, ordered by population in descending order.
 
-Scrum Framework: The Scrum team must adhere to agile practices for continuous delivery and iteration.
+Report Generation:
 
+The system formats the retrieved data: displaying "City Name," "Country," "District," and "Population."
 
+Display Results:
 
-11. Risks and Mitigation:
+The system displays the report on the UI with export options.
 
-Risk: Database schema changes could impact the SQL queries and report accuracy.
+Alternative Flows
 
-Mitigation: The development team should establish a process for validating changes to the database structure and update queries as needed.
+No Data Found:
 
-Risk: Performance degradation with large datasets.
+If no data exists for the selected country, the system displays "No data available for the specified country."
 
-Mitigation: Implement query optimization techniques and caching where applicable.
+Invalid Input:
 
+If the user does not select a country, the system prompts the user to choose one.
 
+Postconditions
 
-12. Scrum-Specific Considerations:
+The user views or downloads a report showing cities in the specified country by population.
 
-Product Backlog: Each report type (e.g., country report, city report, language report) can be a separate backlog item with individual user stories.
+Example Scenario
 
-Sprint Planning: During sprint planning, the team will estimate and plan the development of the report generation system incrementally.
+Input: The user selects "City Population Report by Country" and chooses "Japan."
 
-Sprint Review: The product owner and stakeholders will review each completed report type at the end of the sprint.
+Expected Output: A report listing Japanese cities by population, showing each city's name, district, and population.
 
-Sprint Retrospective: The team will assess and improve the process of building the reporting system after each sprint. 
+Use Case: Generate Capital City Report by Continent
+
+Goal
+
+To allow users to generate a report that lists capital cities within a specified continent, organized by population.
+
+Actors
+
+User: Requests the report and specifies the continent.
+
+System: Retrieves data and formats the report.
+
+Preconditions
+
+The SQL database contains capital city population data.
+
+The system UI allows continent selection.
+
+Trigger
+
+The user selects "Capital City Report by Continent" and specifies a continent.
+
+Main Flow
+
+User Request:
+
+The user selects "Capital City Report by Continent."
+
+The system prompts the user to select a continent.
+
+The user chooses a continent (e.g., "Europe").
+
+System Query:
+
+The system executes an SQL query to retrieve capital cities within the selected continent, ordered by population.
+
+Report Generation:
+
+The system displays the "City Name," "Country," and "Population" for each capital city in the report.
+
+Display Results:
+
+The system shows the report with export options.
+
+Alternative Flows
+
+No Data Found:
+
+If no data is available for the specified continent, the system displays "No data available for the selected continent."
+
+Postconditions
+
+The user can view or export a capital city report for the specified continent.
+
+Example Scenario
+
+Input: The user selects "Capital City Report by Continent" and chooses "Europe."
+
+Expected Output: A report listing European capital cities by population, displaying each city's name, country, and population.
+
+Use Case: Generate Population Summary by Continent
+
+Goal
+
+To allow users to view a summary of population data for each continent, including total population, city population, and non-city population with percentages.
+
+Actors
+
+User: Requests the summary report.
+
+System: Processes the request and retrieves relevant data.
+
+Preconditions
+
+The SQL database is accessible with data on population by continent.
+
+The UI is active and allows report requests.
+
+Trigger
+
+The user selects "Population Summary by Continent."
+
+Main Flow
+
+User Request:
+
+The user selects "Population Summary by Continent" from the report menu.
+
+System Query:
+
+The system executes SQL queries to retrieve population, city population, and non-city population for each continent.
+
+Calculates the percentage of people living in and outside cities for each continent.
+
+Report Generation:
+
+The system displays "Continent Name," "Total Population," "City Population," "Non-City Population," "% in Cities," and "% Not in Cities."
+
+Display Results:
+
+The system displays the summary on the UI and provides export options.
+
+Alternative Flows
+
+No Data Found:
+
+If no data is available, the system shows "No data available for the selected criteria."
+
+Postconditions
+
+The user can view or download the population summary for each continent.
+
+Example Scenario
+
+Expected Output: A report showing each continent’s total population, population in cities, and population not in cities, with percentages for each. 
 
  
