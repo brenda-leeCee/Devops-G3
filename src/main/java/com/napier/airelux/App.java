@@ -5,75 +5,156 @@ import java.io.File;
 import java.io.FileWriter;
 import java.sql.*;
 import java.io.IOException;
+import java.util.Scanner;
 
-
-
-
-public class App {
-
+class ReportSelector {
     /**
      * Connection to MySQL database.
      */
-    private Connection con = null;
+    private static Connection con = null;
+
     public static void main(String[] args) {
-        // Create new Application
-        App a = new App();
+        // Create an instance of ReportSelector
+        ReportSelector app = new ReportSelector();
 
+        // Connect to the database
         if (args.length < 1) {
-            //local
-            a.connect("localhost:33060", 0);
+            // Local
+            app.connect("localhost:33060", 0);
         } else {
-            //docker parameters passed from Dockerfile
-            a.connect(args[0], Integer.parseInt(args[1]));
+            // Docker parameters passed from Dockerfile
+            app.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        try {
-            a.report2();
-        } catch (IOException e) {
-            System.out.println("Error while generating report: " + e.getMessage());
+        // Welcome message and logo
+        System.out.println("Welcome to Analytics ");
+        System.out.println("     /\\        /\\");
+        System.out.println("    /  \\      /  \\");
+        System.out.println("   /____\\    /____\\");
+        System.out.println("  /      \\  /      \\");
+        System.out.println(" /        \\/        \\");
+        System.out.println("AA - Always Ahead");
+        System.out.println();
+
+        System.out.println("Press Enter to proceed or type 'exit' to quit.");
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine().trim().toLowerCase();
+        if (userInput.equals("exit")) {
+            System.out.println("Exiting the program. Goodbye!");
+            app.disconnect();
+            return;
         }
 
-        // Disconnect from database
-        a.disconnect();
+        // Show report selection
+        app.showReportSelection(scanner);
+
+        // Disconnect from the database
+        app.disconnect();
     }
 
-    public void report2() throws IOException {
+    private void showReportSelection(Scanner scanner) {
+        int reportCategoryNum = 0;
+
+        // Constants for input validation
+        int leastEntry = 1;
+        int mostEntry = 6;
+        boolean validInput = false;
+
+        // Prompt user for report category
+        do {
+            System.out.println("1. Country Population Reports");
+            System.out.println("2. City Population Reports");
+            System.out.println("3. Capital City Reports");
+            System.out.println("4. Population Analysis Reports");
+            System.out.println("5. City Reports");
+            System.out.println("6. Language Reports");
+            System.out.println();
+            System.out.print("Please enter the number of the report category you wish to select: ");
+
+            try {
+                reportCategoryNum = Integer.parseInt(scanner.nextLine().trim());
+
+                if (reportCategoryNum >= leastEntry && reportCategoryNum <= mostEntry) {
+                    validInput = true;
+                } else {
+                    System.out.println("Please enter a number between " + leastEntry + " and " + mostEntry + ".");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        } while (!validInput);
+
+        // Use switch to determine which report category was selected
+        switch (reportCategoryNum) {
+            case 1:
+                System.out.println("You selected Country Population Reports.");
+                System.out.println("1. Countries sorted by population.");
+                System.out.println("2. Countries filtered by continent.");
+                System.out.println("3. Countries filtered by region.");
+                System.out.println("4. Top N countries by population.");
+                System.out.println();
+
+                int countrySubcategoryNum;
+                do {
+                    System.out.print("Please choose a report to run: ");
+                    try {
+                        countrySubcategoryNum = Integer.parseInt(scanner.nextLine().trim());
+                        if (countrySubcategoryNum >= 1 && countrySubcategoryNum <= 4) {
+                            switch (countrySubcategoryNum) {
+                                case 1:
+                                    System.out.println("You selected: Countries sorted by population.");
+                                    runCountriesSortedByPopulation();
+                                    break;
+                                case 2:
+                                    System.out.println("Feature not implemented yet.");
+                                    break;
+                                case 3:
+                                    System.out.println("Feature not implemented yet.");
+                                    break;
+                                case 4:
+                                    System.out.println("Feature not implemented yet.");
+                                    break;
+                            }
+                            break;
+                        } else {
+                            System.out.println("Please enter a number between 1 and 4.");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a valid number.");
+                    }
+                } while (true);
+                break;
+
+            default:
+                System.out.println("Invalid category selected.");
+                break;
+        }
+    }
+
+    private void runCountriesSortedByPopulation() {
         StringBuilder sb = new StringBuilder();
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
-            String sql = "select * from country";
+            String sql = "SELECT name, population FROM country ORDER BY population DESC";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(sql);
-            //cycle
+            // Process the results
             while (rset.next()) {
                 String name = rset.getString("name");
-                Integer population = rset.getInt("population");
-                sb.append(name + "\t" + population + "\r\n");
+                int population = rset.getInt("population");
+                sb.append(name).append("\t").append(population).append("\n");
             }
-            new File("./output/").mkdir();
-            BufferedWriter writer = new BufferedWriter(
-                    new FileWriter(new File("./output/report1.txt")));
-            writer.write(sb.toString());
-            writer.close();
             System.out.println(sb.toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get details");
-            return;
+            System.out.println("Failed to get details.");
         }
-
-        System.out.println(sb.toString());
     }
 
     /**
      * Connect to the MySQL database.
-     *
-     * @param conString
-     * 		Use db:3306 for docker and localhost:33060 for local or Integration
-     * 		Tests
-     * @param
      */
     public void connect(String conString, int delay) {
         try {
@@ -91,22 +172,19 @@ public class App {
                 // Wait a bit for db to start
                 Thread.sleep(delay);
                 // Connect to database
-                //Added allowPublicKeyRetrieval=true to get Integration Tests
-                // to work. Possibly due to accessing from another class?
                 con = DriverManager.getConnection("jdbc:mysql://" + conString
-                        + "/world?allowPublicKeyRetrieval=true&useSSL"
-                        + "=false", "root", "example");
+                        + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt "
-                        + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + i);
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
+
     /**
      * Disconnect from the MySQL database.
      */
