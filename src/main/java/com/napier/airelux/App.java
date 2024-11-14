@@ -209,7 +209,53 @@ public class App {
 
     // Sample methods to execute each report type
     public void runCountryReport(String reportType) {
-        // Implement query logic here based on reportType
+        String sql = "";
+
+        switch (reportType) {
+            case "sortedByPopulation":
+                sql = "SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC;";
+                break;
+            case "continentRegionFilter":
+                // Add query for filtering by continent and region if needed
+                break;
+            case "topNCountries":
+                // Add query for top N countries by population if needed
+                break;
+            default:
+                System.out.println("Invalid report type for Country Reports.");
+                return;
+        }
+
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rset = stmt.executeQuery(sql);
+            StringBuilder sb = new StringBuilder();
+
+            while (rset.next()) {
+                String code = rset.getString("code");
+                String name = rset.getString("name");
+                String continent = rset.getString("continent");
+                String region = rset.getString("region");
+                int population = rset.getInt("population");
+                int capital = rset.getInt("capital");
+
+                sb.append(code).append("\t")
+                        .append(name).append("\t")
+                        .append(continent).append("\t")
+                        .append(region).append("\t")
+                        .append(population).append("\t")
+                        .append(capital).append("\r\n");
+            }
+
+            new File("./output/").mkdir();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./output/country_report_sortedByPopulation.txt")));
+            writer.write(sb.toString());
+            writer.close();
+            System.out.println(sb.toString());
+
+        } catch (SQLException | IOException e) {
+            System.out.println("Failed to generate country report: " + e.getMessage());
+        }
     }
 
     public void runCityReport(String reportType) {
