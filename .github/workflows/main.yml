@@ -3,8 +3,8 @@ on: push
 
 jobs:
   build:
-    name: analysis action
-    runs-on: ubuntu-20.04
+    name: Airelux Analysis Action
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
