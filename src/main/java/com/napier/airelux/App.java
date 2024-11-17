@@ -112,7 +112,11 @@ class ReportSelector {
                 switch (choice) {
                     case 1:
                         runReport(scanner, "Countries sorted by population",
-                                "SELECT name, population FROM country ORDER BY population DESC");
+                                "SELECT code, name, continent, region, population, capital  \n" +
+                                        "\n" +
+                                        "FROM country \n" +
+                                        "\n" +
+                                        "ORDER BY population DESC");
                         break;
                     case 2:
                         runReport(scanner, "Countries filtered by continent",
