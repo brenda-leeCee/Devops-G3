@@ -112,23 +112,27 @@ class ReportSelector {
                 switch (choice) {
                     case 1:
                         runReport(scanner, "Countries sorted by population",
-                                "SELECT code, name, continent, region, population, capital  \n" +
-                                        "\n" +
-                                        "FROM country \n" +
-                                        "\n" +
-                                        "ORDER BY population DESC");
+                                "SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC");
                         break;
                     case 2:
-                        runReport(scanner, "Countries filtered by continent",
-                                "SELECT name, population FROM country WHERE continent = 'Asia' ORDER BY population DESC");
+                        filterCountriesByContinent(scanner);
                         break;
                     case 3:
-                        runReport(scanner, "Countries filtered by region",
-                                "SELECT name, population FROM country WHERE region = 'Western Europe' ORDER BY population DESC");
+                        filterCountriesByRegion(scanner);
                         break;
                     case 4:
-                        runReport(scanner, "Top N countries by population",
-                                "SELECT name, population FROM country ORDER BY population DESC LIMIT 10");
+                        System.out.print("Enter the number of countries you want to display (N): ");
+                        try {
+                            int n = Integer.parseInt(scanner.nextLine().trim());
+                            if (n > 0) {
+                                String query = "SELECT name, population FROM country ORDER BY population DESC LIMIT " + n;
+                                runReport(scanner, "Top " + n + " countries by population", query);
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
                         break;
                     case 5:
                         return; // Back to main menu
@@ -140,6 +144,96 @@ class ReportSelector {
             }
         }
     }
+
+
+    private void filterCountriesByRegion(Scanner scanner) {
+        System.out.print("Please enter the region you'd like to filter by: ");
+        String region = scanner.nextLine().trim();
+
+        // Ensure the input is sanitized
+        if (region.isEmpty()) {
+            System.out.println("Region cannot be empty. Please try again.");
+            return;
+        }
+
+        String query = "SELECT code, name, continent, region, population, capital " +
+                "FROM country " +
+                "WHERE region = ? " +
+                "ORDER BY population DESC";
+
+        try (PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setString(1, region);
+
+            System.out.println("\nRunning Report: Countries filtered by region: " + region);
+            ResultSet rset = pstmt.executeQuery();
+            StringBuilder sb = new StringBuilder();
+
+            while (rset.next()) {
+                sb.append(rset.getString("code")).append("\t")
+                        .append(rset.getString("name")).append("\t")
+                        .append(rset.getString("continent")).append("\t")
+                        .append(rset.getString("region")).append("\t")
+                        .append(rset.getInt("population")).append("\t")
+                        .append(rset.getString("capital")).append("\n");
+            }
+
+            if (sb.length() > 0) {
+                System.out.println("Results:");
+                System.out.println(sb.toString());
+            } else {
+                System.out.println("No results found for the specified region: " + region);
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
+        }
+    }
+
+
+    private void filterCountriesByContinent(Scanner scanner) {
+        System.out.println("Select a continent:");
+        System.out.println("1. Africa");
+        System.out.println("2. Asia");
+        System.out.println("3. Europe");
+        System.out.println("4. North America");
+        System.out.println("5. Oceania");
+        System.out.println("6. South America");
+        System.out.print("Enter the number corresponding to your choice: ");
+
+        try {
+            int continentChoice = Integer.parseInt(scanner.nextLine().trim());
+            String continent = null;
+
+            switch (continentChoice) {
+                case 1:
+                    continent = "Africa";
+                    break;
+                case 2:
+                    continent = "Asia";
+                    break;
+                case 3:
+                    continent = "Europe";
+                    break;
+                case 4:
+                    continent = "North America";
+                    break;
+                case 5:
+                    continent = "Oceania";
+                    break;
+                case 6:
+                    continent = "South America";
+                    break;
+                default:
+                    System.out.println("Invalid input. Please enter a number between 1 and 6.");
+                    return;
+            }
+
+            String query = "SELECT code, name, continent, region, population, capital FROM country WHERE continent = '" + continent + "' ORDER BY population DESC";
+            runReport(scanner, "Countries filtered by continent: " + continent, query);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+        }
+    }
+
 
     private void handleCityPopulationReports(Scanner scanner) {
         while (true) {
