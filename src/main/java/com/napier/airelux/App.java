@@ -1,79 +1,84 @@
 package com.napier.airelux;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
 import java.sql.*;
-import java.io.IOException;
-
-
-
 
 public class App {
-
-    /**
-     * Connection to MySQL database.
-     */
     private Connection con = null;
+
     public static void main(String[] args) {
         // Create new Application
         App a = new App();
 
         if (args.length < 1) {
-            //local
+            // Local connection
             a.connect("localhost:33060", 0);
         } else {
-            //docker parameters passed from Dockerfile
+            // Docker parameters passed from Dockerfile
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
         try {
-            a.report2();
+            a.report1();
         } catch (IOException e) {
-            System.out.println("Error while generating report: " + e.getMessage());
+            System.out.println("Error writing report: " + e.getMessage());
         }
 
         // Disconnect from database
         a.disconnect();
     }
 
-    public void report2() throws IOException {
+    public void report1() throws IOException {
         StringBuilder sb = new StringBuilder();
+        Statement stmt = null;
+        ResultSet rset = null;
+
         try {
             // Create an SQL statement
-            Statement stmt = con.createStatement();
+            stmt = con.createStatement();
             // Create string for SQL statement
-            String sql = "select * from country";
+            String sql = "SELECT * FROM country";
             // Execute SQL statement
-            ResultSet rset = stmt.executeQuery(sql);
-            //cycle
+            rset = stmt.executeQuery(sql);
+
+            // Process the results
             while (rset.next()) {
                 String name = rset.getString("name");
                 Integer population = rset.getInt("population");
-                sb.append(name + "\t" + population + "\r\n");
+                sb.append(name).append("\t").append(population).append("\r\n");
             }
-            new File("./output/").mkdir();
-            BufferedWriter writer = new BufferedWriter(
-                    new FileWriter(new File("./output/report1.txt")));
-            writer.write(sb.toString());
-            writer.close();
-            System.out.println(sb.toString());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get details");
-            return;
-        }
 
-        System.out.println(sb.toString());
+            // Ensure the output directory exists
+            File outputDir = new File("./output/");
+            if (!outputDir.exists()) {
+                outputDir.mkdir();
+            }
+
+            // Write to the file
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./output/report1.txt")))) {
+                writer.write(sb.toString());
+            }
+            System.out.println(sb.toString());
+
+        } catch (SQLException e) {
+            System.out.println("SQL error: " + e.getMessage());
+            System.out.println("Failed to retrieve details.");
+        } finally {
+            // Close resources
+            try {
+                if (rset != null) rset.close();
+                if (stmt != null) stmt.close();
+            } catch (SQLException e) {
+                System.out.println("Error closing resources: " + e.getMessage());
+            }
+        }
     }
 
     /**
      * Connect to the MySQL database.
      *
-     * @param conString
-     * 		Use db:3306 for docker and localhost:33060 for local or Integration
-     * 		Tests
-     * @param
+     * @param conString Connection string, e.g., "db:3306" for docker or "localhost:33060" for local.
+     * @param delay Connection retry delay in milliseconds.
      */
     public void connect(String conString, int delay) {
         try {
@@ -90,23 +95,19 @@ public class App {
             try {
                 // Wait a bit for db to start
                 Thread.sleep(delay);
-                // Connect to database
-                //Added allowPublicKeyRetrieval=true to get Integration Tests
-                // to work. Possibly due to accessing from another class?
-                con = DriverManager.getConnection("jdbc:mysql://" + conString
-                        + "/world?allowPublicKeyRetrieval=true&useSSL"
-                        + "=false", "root", "example");
+                // Connect to database with allowPublicKeyRetrieval set for integration tests
+                con = DriverManager.getConnection("jdbc:mysql://" + conString + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
-                System.out.println("Failed to connect to database attempt "
-                        + Integer.toString(i));
+                System.out.println("Failed to connect to database attempt " + (i + 1));
                 System.out.println(sqle.getMessage());
             } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
     }
+
     /**
      * Disconnect from the MySQL database.
      */
@@ -115,8 +116,9 @@ public class App {
             try {
                 // Close connection
                 con.close();
-            } catch (Exception e) {
-                System.out.println("Error closing connection to database");
+                System.out.println("Disconnected from database.");
+            } catch (SQLException e) {
+                System.out.println("Error closing connection to database: " + e.getMessage());
             }
         }
     }
