@@ -48,6 +48,13 @@ class ReportSelector {
         app.disconnect();
     }
 
+    /**
+     * Set the database connection (used for unit testing).
+     */
+    public void setConnection(Connection connection) {
+        this.con = connection;
+    }
+
     private void showReportSelection(Scanner scanner) {
         while (true) {
             System.out.println("Main Menu:");
@@ -60,6 +67,7 @@ class ReportSelector {
             System.out.println("7. Exit");
             System.out.println();
             System.out.print("Please enter the number of the report category you wish to select: ");
+
 
             try {
                 int reportCategoryNum = Integer.parseInt(scanner.nextLine().trim());
