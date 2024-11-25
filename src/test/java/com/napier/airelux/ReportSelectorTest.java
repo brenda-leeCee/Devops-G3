@@ -36,16 +36,17 @@ class ReportSelector {
      */
     public void connect(String conString, int delay) {
         try {
+            // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("Could not load SQL driver");
-            System.exit(-1);
+            throw new RuntimeException("Could not load SQL driver", e);
         }
 
         int retries = 10;
         for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
             try {
+                // Wait a bit for db to start
                 Thread.sleep(delay);
                 con = DriverManager.getConnection("jdbc:mysql://" + conString
                         + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
@@ -58,8 +59,8 @@ class ReportSelector {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
-        // Ensure the connection is set to null after all retries fail
-        con = null;
+        // Throw exception if all retries fail
+        throw new RuntimeException("Failed to connect to database after " + retries + " attempts.");
     }
 
     /**
@@ -102,16 +103,17 @@ class ReportSelector {
                 con.close();
                 System.out.println("Disconnected from the database.");
             } catch (SQLException e) {
-                System.out.println("Error closing connection to database");
+                System.out.println("Error closing connection to database: " + e.getMessage());
+            } finally {
+                con = null; // Ensure the connection is set to null
             }
         }
     }
 
     /**
-     * For testing: Accessor to get the current connection.
+     * Accessor for the connection (used for testing).
      */
     public Connection getConnection() {
         return con;
     }
 }
-
