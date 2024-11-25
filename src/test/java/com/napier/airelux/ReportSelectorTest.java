@@ -19,9 +19,10 @@ class ReportSelector {
             app.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        // Example functionality (can be removed if not needed for testing)
+        // Check connection status
         if (con != null) {
             System.out.println("Connected to the database successfully.");
+            app.runReport("SELECT * FROM country LIMIT 5"); // Example query
         } else {
             System.out.println("Failed to connect to the database.");
         }
@@ -62,6 +63,37 @@ class ReportSelector {
     }
 
     /**
+     * Run a SQL report query and print the results.
+     */
+    public void runReport(String query) {
+        if (con == null) {
+            System.out.println("No active database connection.");
+            return;
+        }
+
+        try (Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
+            ResultSetMetaData metaData = rs.getMetaData();
+            int columnCount = metaData.getColumnCount();
+
+            // Print column headers
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.print(metaData.getColumnName(i) + "\t");
+            }
+            System.out.println();
+
+            // Print rows
+            while (rs.next()) {
+                for (int i = 1; i <= columnCount; i++) {
+                    System.out.print(rs.getString(i) + "\t");
+                }
+                System.out.println();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e.getMessage());
+        }
+    }
+
+    /**
      * Disconnect from the MySQL database.
      */
     public void disconnect() {
@@ -82,3 +114,4 @@ class ReportSelector {
         return con;
     }
 }
+
