@@ -133,8 +133,8 @@ class ReportSelector {
                         try {
                             int n = Integer.parseInt(scanner.nextLine().trim());
                             if (n > 0) {
-                                String query = "SELECT name, population FROM country ORDER BY population DESC LIMIT " + n;
-                                runReport(scanner, "Top " + n + " countries by population", query);
+                                String query = "SELECT name, population FROM country ORDER BY population DESC LIMIT ?";
+                                displayTopNCountries(n, query);
                             } else {
                                 System.out.println("Please enter a positive number.");
                             }
@@ -153,49 +153,28 @@ class ReportSelector {
         }
     }
 
-
     private void filterCountriesByRegion(Scanner scanner) {
         System.out.print("Please enter the region you'd like to filter by: ");
         String region = scanner.nextLine().trim();
 
-        // Ensure the input is sanitized
         if (region.isEmpty()) {
             System.out.println("Region cannot be empty. Please try again.");
             return;
         }
 
         String query = "SELECT code, name, continent, region, population, capital " +
-                "FROM country " +
-                "WHERE region = ? " +
-                "ORDER BY population DESC";
+                "FROM country WHERE region = ? ORDER BY population DESC";
 
         try (PreparedStatement pstmt = con.prepareStatement(query)) {
             pstmt.setString(1, region);
 
             System.out.println("\nRunning Report: Countries filtered by region: " + region);
             ResultSet rset = pstmt.executeQuery();
-            StringBuilder sb = new StringBuilder();
-
-            while (rset.next()) {
-                sb.append(rset.getString("code")).append("\t")
-                        .append(rset.getString("name")).append("\t")
-                        .append(rset.getString("continent")).append("\t")
-                        .append(rset.getString("region")).append("\t")
-                        .append(rset.getInt("population")).append("\t")
-                        .append(rset.getString("capital")).append("\n");
-            }
-
-            if (sb.length() > 0) {
-                System.out.println("Results:");
-                System.out.println(sb.toString());
-            } else {
-                System.out.println("No results found for the specified region: " + region);
-            }
+            printResultSet(rset);
         } catch (SQLException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
-
 
     private void filterCountriesByContinent(Scanner scanner) {
         System.out.println("Select a continent:");
@@ -209,36 +188,65 @@ class ReportSelector {
 
         try {
             int continentChoice = Integer.parseInt(scanner.nextLine().trim());
-            String continent = null;
+            String continent = switch (continentChoice) {
+                case 1 -> "Africa";
+                case 2 -> "Asia";
+                case 3 -> "Europe";
+                case 4 -> "North America";
+                case 5 -> "Oceania";
+                case 6 -> "South America";
+                default -> null;
+            };
 
-            switch (continentChoice) {
-                case 1:
-                    continent = "Africa";
-                    break;
-                case 2:
-                    continent = "Asia";
-                    break;
-                case 3:
-                    continent = "Europe";
-                    break;
-                case 4:
-                    continent = "North America";
-                    break;
-                case 5:
-                    continent = "Oceania";
-                    break;
-                case 6:
-                    continent = "South America";
-                    break;
-                default:
-                    System.out.println("Invalid input. Please enter a number between 1 and 6.");
-                    return;
+            if (continent == null) {
+                System.out.println("Invalid input. Please enter a number between 1 and 6.");
+                return;
             }
 
-            String query = "SELECT code, name, continent, region, population, capital FROM country WHERE continent = '" + continent + "' ORDER BY population DESC";
-            runReport(scanner, "Countries filtered by continent: " + continent, query);
+            String query = "SELECT code, name, continent, region, population, capital " +
+                    "FROM country WHERE continent = ? ORDER BY population DESC";
+
+            try (PreparedStatement pstmt = con.prepareStatement(query)) {
+                pstmt.setString(1, continent);
+
+                System.out.println("\nRunning Report: Countries filtered by continent: " + continent);
+                ResultSet rset = pstmt.executeQuery();
+                printResultSet(rset);
+            }
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a valid number.");
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
+        }
+    }
+
+    private void displayTopNCountries(int n, String query) {
+        try (PreparedStatement pstmt = con.prepareStatement(query)) {
+            pstmt.setInt(1, n);
+
+            System.out.println("\nRunning Report: Top " + n + " countries by population");
+            ResultSet rset = pstmt.executeQuery();
+            printResultSet(rset);
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
+        }
+    }
+
+    private void printResultSet(ResultSet rset) throws SQLException {
+        StringBuilder sb = new StringBuilder();
+        while (rset.next()) {
+            ResultSetMetaData metaData = rset.getMetaData();
+            for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                sb.append(rset.getString(i)).append("\t");
+            }
+            sb.append("\n");
+        }
+
+        if (sb.length() > 0) {
+            System.out.println("Results:");
+            System.out.println(sb.toString());
+        } else {
+            System.out.println("No results found.");
         }
     }
 
@@ -532,5 +540,13 @@ class ReportSelector {
                 System.out.println("Error closing connection to database");
             }
         }
+    }
+
+    public Object getConnection() {
+        return null;
+    }
+
+    public Object runReport(String query) {
+        return null;
     }
 }
