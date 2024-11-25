@@ -533,4 +533,12 @@ class ReportSelector {
             }
         }
     }
+
+    public Object getConnection() {
+        return null;
+    }
+
+    public Object runReport(String query) {
+        return null;
+    }
 }
