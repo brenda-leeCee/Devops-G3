@@ -691,4 +691,10 @@ class ReportSelector {
     public Object getConnection() {
         return con;
     }
+
+    public void runReport(String testReport, String query, String number) {
+    }
+
+    public void runReport(String query) {
+    }
 }

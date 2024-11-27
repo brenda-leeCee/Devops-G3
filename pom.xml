@@ -9,19 +9,20 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mysql.connector.version>8.0.33</mysql.connector.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version>
         <mockito.version>4.11.0</mockito.version>
+        <bytebuddy.version>1.14.5</bytebuddy.version>
     </properties>
 
     <dependencies>
         <!-- MySQL Connector -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <version>${mysql.connector.version}</version>
         </dependency>
 
@@ -33,7 +34,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito -->
+        <!-- Mockito Core -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -41,12 +42,19 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito Inline (optional, for final classes or static methods) -->
+        <!-- Mockito Inline (for final classes/static methods) -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-inline</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Byte Buddy -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>${bytebuddy.version}</version>
         </dependency>
     </dependencies>
 
@@ -98,6 +106,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
+                    <argLine>-Dnet.bytebuddy.experimental=true</argLine>
                 </configuration>
             </plugin>
 

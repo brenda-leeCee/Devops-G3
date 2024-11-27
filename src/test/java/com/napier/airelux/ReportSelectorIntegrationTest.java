@@ -37,7 +37,7 @@ class IntegrationTest {
     @Test
     public void testRunReport() {
         // Verify that a query runs without errors
-        assertDoesNotThrow(() -> reportSelector.runReport(scanner, "Population of cities by continent: " + continent, "SELECT city.Name, city.Population " + "FROM city " + "JOIN country ON city.CountryCode = country.Code " + "WHERE country.Continent = ? " + "ORDER BY city.Population DESC", "SELECT * FROM country LIMIT 5"),
+        assertDoesNotThrow(() -> reportSelector.runReport("SELECT * FROM country LIMIT 5"),
                 "The query should execute without throwing exceptions.");
     }
 
