@@ -1,5 +1,6 @@
 package com.napier.airelux;
 
+import java.io.*;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -97,8 +98,11 @@ class ReportSelector {
 
             System.out.println("\nRunning Report: Countries filtered by region: " + region);
             ResultSet rset = pstmt.executeQuery();
-            printResultSet(rset);
-        } catch (SQLException e) {
+
+            // Save user input to file
+            saveToFile("user_input.txt", "Region Filter: " + region + "\n");
+            printResultSet(rset); // Save the query results
+        } catch (SQLException | IOException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
@@ -138,11 +142,14 @@ class ReportSelector {
 
                 System.out.println("\nRunning Report: Countries filtered by continent: " + continent);
                 ResultSet rset = pstmt.executeQuery();
-                printResultSet(rset);
+
+                // Save user input to file
+                saveToFile("user_input.txt", "Continent Filter: " + continent + "\n");
+                printResultSet(rset); // Save the query results
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a valid number.");
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
@@ -158,14 +165,17 @@ class ReportSelector {
 
                     System.out.println("\nRunning Report: Top " + n + " countries by population");
                     ResultSet rset = pstmt.executeQuery();
-                    printResultSet(rset);
+
+                    // Save user input to file
+                    saveToFile("user_input.txt", "Top N Countries: " + n + "\n");
+                    printResultSet(rset); // Save the query results
                 }
             } else {
                 System.out.println("Please enter a positive number.");
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a valid number.");
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
@@ -175,21 +185,26 @@ class ReportSelector {
             System.out.println("\nRunning Report: " + reportName);
             Statement stmt = con.createStatement();
             ResultSet rset = stmt.executeQuery(query);
-            printResultSet(rset);
-        } catch (SQLException e) {
+
+            // Save user input to file
+            saveToFile("user_input.txt", "Report Name: " + reportName + "\n");
+            printResultSet(rset); // Save the query results
+        } catch (SQLException | IOException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
 
-    private void printResultSet(ResultSet rset) throws SQLException {
+    private void printResultSet(ResultSet rset) throws SQLException, IOException {
         StringBuilder sb = new StringBuilder();
         ResultSetMetaData metaData = rset.getMetaData();
 
+        // Append column headers
         for (int i = 1; i <= metaData.getColumnCount(); i++) {
             sb.append(metaData.getColumnName(i)).append("\t");
         }
         sb.append("\n");
 
+        // Append rows
         while (rset.next()) {
             for (int i = 1; i <= metaData.getColumnCount(); i++) {
                 sb.append(rset.getString(i)).append("\t");
@@ -197,7 +212,21 @@ class ReportSelector {
             sb.append("\n");
         }
 
-        System.out.println(sb.length() > 0 ? sb : "No results found.");
+        // Print and save results
+        String resultString = sb.length() > 0 ? sb.toString() : "No results found.";
+        System.out.println(resultString);
+        saveToFile("report.txt", resultString); // Save to file
+    }
+
+    private void saveToFile(String fileName, String content) throws IOException {
+        File outputDir = new File("./output/");
+        if (!outputDir.exists()) {
+            outputDir.mkdir(); // Create the output directory if it doesn't exist
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(outputDir, fileName), true))) {
+            writer.write(content);
+        }
     }
 
     /**
