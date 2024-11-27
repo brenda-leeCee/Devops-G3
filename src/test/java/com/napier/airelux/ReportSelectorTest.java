@@ -22,7 +22,7 @@ class ReportSelector {
         // Check connection status
         if (con != null) {
             System.out.println("Connected to the database successfully.");
-            app.runReport("SELECT * FROM country LIMIT 5"); // Example query
+            app.runReport(scanner, "Population of cities by continent: " + continent, "SELECT city.Name, city.Population " + "FROM city " + "JOIN country ON city.CountryCode = country.Code " + "WHERE country.Continent = ? " + "ORDER BY city.Population DESC", "SELECT * FROM country LIMIT 5"); // Example query
         } else {
             System.out.println("Failed to connect to the database.");
         }
