@@ -32,13 +32,6 @@ class ReportSelector {
     }
 
     /**
-     * Set the database connection (used for unit testing).
-     */
-    public void setConnection(Connection connection) {
-        this.con = connection;
-    }
-
-    /**
      * Handles the Country Population Reports submenu.
      */
     private void handleCountryReports(Scanner scanner) {
@@ -97,7 +90,8 @@ class ReportSelector {
             pstmt.setString(1, region);
 
             System.out.println("\nRunning Report: Countries filtered by region: " + region);
-            ResultSet rset = pstmt.executeQuery();
+            ResultSet rset;
+            rset = pstmt.executeQuery();
 
             // Save user input to file
             saveToFile("user_input.txt", "Region Filter: " + region + "\n");
