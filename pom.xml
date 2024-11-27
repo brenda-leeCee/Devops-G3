@@ -49,7 +49,7 @@
                     <finalName>airelux</finalName>
                     <archive>
                         <manifest>
-                            <mainClass>com.napier.airelux.App</mainClass>
+                            <mainClass>com.napier.airelux.App.ReportSelector</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
