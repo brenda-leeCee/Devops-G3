@@ -1,0 +1,58 @@
+NGA	Nigeria	Africa	Western Africa	111506000	2754	
+EGY	Egypt	Africa	Northern Africa	68470000	608	
+ETH	Ethiopia	Africa	Eastern Africa	62565000	756	
+COD	Congo, The Democratic Republic of the	Africa	Central Africa	51654000	2298	
+ZAF	South Africa	Africa	Southern Africa	40377000	716	
+TZA	Tanzania	Africa	Eastern Africa	33517000	3306	
+DZA	Algeria	Africa	Northern Africa	31471000	35	
+KEN	Kenya	Africa	Eastern Africa	30080000	1881	
+SDN	Sudan	Africa	Northern Africa	29490000	3225	
+MAR	Morocco	Africa	Northern Africa	28351000	2486	
+UGA	Uganda	Africa	Eastern Africa	21778000	3425	
+GHA	Ghana	Africa	Western Africa	20212000	910	
+MOZ	Mozambique	Africa	Eastern Africa	19680000	2698	
+MDG	Madagascar	Africa	Eastern Africa	15942000	2455	
+CMR	Cameroon	Africa	Central Africa	15085000	1804	
+CIV	Côte d’Ivoire	Africa	Western Africa	14786000	2814	
+AGO	Angola	Africa	Central Africa	12878000	56	
+BFA	Burkina Faso	Africa	Western Africa	11937000	549	
+ZWE	Zimbabwe	Africa	Eastern Africa	11669000	4068	
+MLI	Mali	Africa	Western Africa	11234000	2482	
+MWI	Malawi	Africa	Eastern Africa	10925000	2462	
+NER	Niger	Africa	Western Africa	10730000	2738	
+SOM	Somalia	Africa	Eastern Africa	10097000	3214	
+TUN	Tunisia	Africa	Northern Africa	9586000	3349	
+SEN	Senegal	Africa	Western Africa	9481000	3198	
+ZMB	Zambia	Africa	Eastern Africa	9169000	3162	
+RWA	Rwanda	Africa	Eastern Africa	7733000	3047	
+TCD	Chad	Africa	Central Africa	7651000	3337	
+GIN	Guinea	Africa	Western Africa	7430000	926	
+BDI	Burundi	Africa	Eastern Africa	6695000	552	
+BEN	Benin	Africa	Western Africa	6097000	187	
+LBY	Libyan Arab Jamahiriya	Africa	Northern Africa	5605000	2441	
+SLE	Sierra Leone	Africa	Western Africa	4854000	3207	
+TGO	Togo	Africa	Western Africa	4629000	3332	
+ERI	Eritrea	Africa	Eastern Africa	3850000	652	
+CAF	Central African Republic	Africa	Central Africa	3615000	1889	
+LBR	Liberia	Africa	Western Africa	3154000	2440	
+COG	Congo	Africa	Central Africa	2943000	2296	
+MRT	Mauritania	Africa	Western Africa	2670000	2509	
+LSO	Lesotho	Africa	Southern Africa	2153000	2437	
+NAM	Namibia	Africa	Southern Africa	1726000	2726	
+BWA	Botswana	Africa	Southern Africa	1622000	204	
+GMB	Gambia	Africa	Western Africa	1305000	904	
+GAB	Gabon	Africa	Central Africa	1226000	902	
+GNB	Guinea-Bissau	Africa	Western Africa	1213000	927	
+MUS	Mauritius	Africa	Eastern Africa	1158000	2511	
+SWZ	Swaziland	Africa	Southern Africa	1008000	3244	
+REU	Réunion	Africa	Eastern Africa	699000	3017	
+DJI	Djibouti	Africa	Eastern Africa	638000	585	
+COM	Comoros	Africa	Eastern Africa	578000	2295	
+GNQ	Equatorial Guinea	Africa	Central Africa	453000	2972	
+CPV	Cape Verde	Africa	Western Africa	428000	1859	
+ESH	Western Sahara	Africa	Northern Africa	293000	2453	
+MYT	Mayotte	Africa	Eastern Africa	149000	2514	
+STP	Sao Tome and Principe	Africa	Central Africa	147000	3172	
+SYC	Seychelles	Africa	Eastern Africa	77000	3206	
+SHN	Saint Helena	Africa	Western Africa	6000	3063	
+IOT	British Indian Ocean Territory	Africa	Eastern Africa	0	null	

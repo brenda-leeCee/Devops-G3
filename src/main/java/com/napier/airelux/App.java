@@ -1,5 +1,8 @@
 package com.napier.airelux;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -120,7 +123,8 @@ class ReportSelector {
                 switch (choice) {
                     case 1:
                         runReport(scanner, "Countries sorted by population",
-                                "SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC");
+                                "SELECT code, name, continent, region, population, capital FROM country ORDER BY population DESC"
+                        );
                         break;
                     case 2:
                         filterCountriesByContinent(scanner);
@@ -134,7 +138,8 @@ class ReportSelector {
                             int n = Integer.parseInt(scanner.nextLine().trim());
                             if (n > 0) {
                                 runReport(scanner, "Top " + n + " countries by population",
-                                        "SELECT name, population FROM country ORDER BY population DESC LIMIT ?");
+                                        "SELECT name, population FROM country ORDER BY population DESC LIMIT ?"
+                                );
                             } else {
                                 System.out.println("Please enter a positive number.");
                             }
@@ -172,7 +177,7 @@ class ReportSelector {
 
             System.out.println("\nRunning Report: Countries filtered by region: " + region);
             ResultSet rset = pstmt.executeQuery();
-            printResultSet(rset);
+            printResultSet(rset, "Countries_Filtered_By_Region_" + region);
         } catch (SQLException e) {
             System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
@@ -215,7 +220,7 @@ class ReportSelector {
 
                 System.out.println("\nRunning Report: Countries filtered by continent: " + continent);
                 ResultSet rset = pstmt.executeQuery();
-                printResultSet(rset);
+                printResultSet(rset, "Countries_Filtered_By_Continent_" + continent);
             }
         } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a valid number.");
@@ -224,8 +229,9 @@ class ReportSelector {
         }
     }
 
-    private void printResultSet(ResultSet rset) throws SQLException {
+    private void printResultSet(ResultSet rset, String fileName) throws SQLException {
         StringBuilder sb = new StringBuilder();
+
         while (rset.next()) {
             ResultSetMetaData metaData = rset.getMetaData();
             for (int i = 1; i <= metaData.getColumnCount(); i++) {
@@ -235,10 +241,31 @@ class ReportSelector {
         }
 
         if (sb.length() > 0) {
+            String reportContent = sb.toString();
             System.out.println("Results:");
-            System.out.println(sb.toString());
+            System.out.println(reportContent);
+
+            saveReportToFile(reportContent, fileName);
         } else {
             System.out.println("No results found.");
+        }
+    }
+
+    private void saveReportToFile(String content, String fileName) {
+        String outputDir = "src/output/";
+        File dir = new File(outputDir);
+
+        // Ensure the directory exists
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
+        File file = new File(dir, fileName + ".txt");
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(content);
+            System.out.println("Report saved to " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.println("Failed to write report to file. Error: " + e.getMessage());
         }
     }
 
