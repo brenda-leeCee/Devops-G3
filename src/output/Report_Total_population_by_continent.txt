@@ -1,0 +1,7 @@
+Asia	3705025700	
+Africa	784475000	
+Europe	730074600	
+North America	482993000	
+South America	345780000	
+Oceania	30401150	
+Antarctica	0	

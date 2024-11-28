@@ -1,0 +1,581 @@
+Ciudad de México	8591309	
+New York	8008278	
+Los Angeles	3694820	
+Chicago	2896016	
+La Habana	2256000	
+Houston	1953631	
+Guadalajara	1647720	
+Ecatepec de Morelos	1620303	
+Santo Domingo de Guzmán	1609966	
+Philadelphia	1517550	
+Puebla	1346176	
+Phoenix	1321045	
+Nezahualcóyotl	1224924	
+San Diego	1223400	
+Juárez	1217818	
+Tijuana	1212232	
+Dallas	1188580	
+San Antonio	1144646	
+León	1133576	
+Monterrey	1108499	
+Montréal	1016376	
+Zapopan	1002239	
+Managua	959000	
+Detroit	951270	
+San Jose	894943	
+Port-au-Prince	884472	
+Naucalpan de Juárez	857511	
+Ciudad de Guatemala	823301	
+Tegucigalpa	813900	
+Indianapolis	791926	
+San Francisco	776733	
+Calgary	768082	
+Mexicali	764902	
+Culiacán	744859	
+Jacksonville	735167	
+Acapulco de Juárez	721011	
+Tlalnepantla de Baz	720755	
+Columbus	711470	
+Mérida	703324	
+Toronto	688275	
+Chihuahua	670208	
+San Luis Potosí	669353	
+Guadalupe	668780	
+Toluca	665617	
+Austin	656562	
+Baltimore	651154	
+Memphis	650100	
+Aguascalientes	643360	
+Querétaro	639839	
+North York	622632	
+Morelia	619958	
+Winnipeg	618477	
+Edmonton	616306	
+Hermosillo	608697	
+Mississauga	608072	
+Milwaukee	596974	
+Scarborough	594501	
+Boston	589141	
+Saltillo	577352	
+Washington	572059	
+Nashville-Davidson	569891	
+El Paso	563662	
+Seattle	563374	
+Denver	554636	
+Charlotte	540828	
+Fort Worth	534694	
+Portland	529121	
+Torreón	529093	
+Centro (Villahermosa)	519873	
+Vancouver	514008	
+Oklahoma City	506132	
+San Nicolás de los Garza	495540	
+Durango	490524	
+Chimalhuacán	490245	
+Tucson	486699	
+New Orleans	484674	
+Las Vegas	478434	
+Cleveland	478403	
+Tlaquepaque	475472	
+Ciudad de Panamá	471373	
+Atizapán de Zaragoza	467262	
+Long Beach	461522	
+Veracruz	457119	
+Cuautitlán Izcalli	452976	
+Albuquerque	448607	
+Kansas City	441545	
+Irapuato	440039	
+San Juan	434374	
+Tuxtla Gutiérrez	433544	
+Santiago de Cuba	433180	
+Tultitlán	432411	
+Fresno	427652	
+Virginia Beach	425257	
+Reynosa	419776	
+Benito Juárez	419276	
+Atlanta	416474	
+Matamoros	416428	
+San Salvador	415346	
+Sacramento	407018	
+Oakland	399484	
+Mesa	396375	
+Tulsa	393049	
+Xalapa	390058	
+Omaha	390007	
+San Pedro Sula	383900	
+Minneapolis	382618	
+Celaya	382140	
+Mazatlán	380265	
+Honolulu	371657	
+Ensenada	369573	
+Santiago de los Caballeros	365463	
+Miami	362470	
+Colorado Springs	360890	
+Ahome	358663	
+Cajeme	355679	
+Etobicoke	348845	
+Saint Louis	348189	
+Wichita	344284	
+London	339917	
+San José	339131	
+Santa Ana	337977	
+Cuernavaca	337966	
+Tonalá	336109	
+Hamilton	335614	
+Ottawa	335277	
+Pittsburgh	334563	
+Arlington	332969	
+Cincinnati	331285	
+Laval	330393	
+Anaheim	328014	
+Valle de Chalco Solidaridad	323113	
+San Miguelito	315382	
+Toledo	313619	
+Nuevo Laredo	310277	
+Tepic	305025	
+Surrey	304477	
+Tampa	303447	
+Camagüey	298726	
+Brampton	296711	
+Tampico	294789	
+Ixtapaluca	293160	
+Buffalo	292648	
+Carrefour	290204	
+Saint Paul	287151	
+Apodaca	282941	
+Corpus Christi	277454	
+Guasave	277201	
+Aurora	276393	
+Raleigh	276093	
+Newark	273546	
+Gómez Palacio	272806	
+Tapachula	271141	
+Nicolás Romero	269393	
+Coatzacoalcos	267037	
+Uruapan	265211	
+Victoria	262686	
+Lexington-Fayette	260512	
+Anchorage	260283	
+Oaxaca de Juárez	256848	
+Louisville	256231	
+Riverside	255166	
+Coacalco de Berriozábal	252270	
+Holguín	249492	
+Saint Petersburg	248232	
+Bakersfield	247057	
+Pachuca de Soto	244688	
+Stockton	243771	
+Birmingham	242820	
+Delmas	240429	
+Jersey City	240055	
+Norfolk	234403	
+General Escobedo	232961	
+Baton Rouge	227818	
+Salamanca	226864	
+Santa Catarina	226573	
+Hialeah	226419	
+Tehuacán	225943	
+Lincoln	225581	
+Bayamón	224044	
+Greensboro	223891	
+Chalco	222201	
+Plano	222030	
+Rochester	219773	
+Glendale	218812	
+Akron	217074	
+Cárdenas	216903	
+Campeche	216735	
+Garland	215768	
+La Paz	213045	
+Mixco	209791	
+Madison	208054	
+Othón P. Blanco (Chetumal)	208014	
+Windsor	207588	
+Santa Clara	207350	
+Fort Wayne	205727	
+Guantánamo	205078	
+Texcoco	203681	
+Fremont	203413	
+Scottsdale	202705	
+Montgomery	201568	
+Shreveport	200145	
+Augusta-Richmond County	199775	
+Lubbock	199564	
+Chesapeake	199184	
+Mobile	198915	
+Des Moines	198682	
+Grand Rapids	197800	
+Richmond	197790	
+La Paz	196708	
+Yonkers	196086	
+Spokane	195629	
+Glendale	194973	
+Metepec	194265	
+Monclova	193657	
+Saskatoon	193647	
+Tacoma	193556	
+Huixquilucan	193156	
+Chilpancingo de los Bravo	192509	
+Irving	191615	
+Kitchener	189959	
+Huntington Beach	189594	
+Markham	189098	
+Modesto	188856	
+Durham	187035	
+Ponce	186475	
+Columbus	186291	
+Carolina	186076	
+Orlando	185951	
+Boise City	185787	
+Winston-Salem	185776	
+San Bernardino	185401	
+Jackson	184256	
+Puerto Vallarta	183741	
+Little Rock	183133	
+Fresnillo	182744	
+Ciudad Madero	182012	
+Salt Lake City	181743	
+Reno	180480	
+Regina	180400	
+Newport News	180150	
+Soledad de Graciano Sánchez	179956	
+San Juan del Río	179300	
+Burnaby	179209	
+San Felipe del Progreso	177330	
+Córdoba	176952	
+Chandler	176581	
+Laredo	176576	
+Henderson	175381	
+Arlington	174838	
+Knoxville	173890	
+Amarillo	173627	
+Providence	173618	
+Chula Vista	173556	
+Worcester	172648	
+Tecámac	172410	
+Nassau	172000	
+Ocosingo	171495	
+Carmen	171367	
+Lázaro Cárdenas	170878	
+Jiutepec	170428	
+Oxnard	170358	
+Papantla	170123	
+Québec	167264	
+Dayton	166179	
+Garden Grove	165196	
+Comalcalco	164640	
+Zamora	161191	
+Oceanside	161029	
+Nogales	159103	
+Tempe	158625	
+Huimanguillo	158335	
+Huntsville	158216	
+Ontario	158007	
+Chattanooga	155554	
+York	154980	
+Cuautla	153132	
+Minatitlán	152983	
+Poza Rica de Hidalgo	152678	
+Fort Lauderdale	152397	
+Springfield	152082	
+Springfield	151580	
+Santa Clarita	151088	
+Salinas	151060	
+Tallahassee	150624	
+Rockford	150115	
+Pomona	149473	
+Metairie	149428	
+Paterson	149222	
+Overland Park	149080	
+Richmond	148867	
+Vaughan	147889	
+Santa Rosa	147595	
+Syracuse	147306	
+Kansas City	146866	
+Hampton	146437	
+Ciudad Valles	146411	
+Navolato	145396	
+San Luis Río Colorado	145276	
+Burlington	145150	
+Lakewood	144126	
+Pénjamo	143927	
+Vancouver	143560	
+Irvine	143072	
+Aurora	142990	
+Moreno Valley	142381	
+San Andrés Tuxtla	142251	
+Pinar del Río	142100	
+Pasadena	141674	
+Guanajuato	141215	
+Bayamo	141000	
+Caguas	140502	
+Navojoa	140495	
+La Romana	140204	
+Oshawa	140173	
+Hayward	140030	
+Brownsville	139722	
+Bridgeport	139529	
+Santa Ana	139389	
+Hollywood	139357	
+Oakville	139192	
+Mejicanos	138800	
+Warren	138247	
+Zitácuaro	137970	
+Torrance	137946	
+Eugene	137893	
+Pembroke Pines	137427	
+Salem	136924	
+Saint Catharines	136216	
+Boca del Río	135721	
+Allende	134645	
+Silao	134037	
+Pasadena	133936	
+Macuspana	133795	
+San Juan Bautista Tuxtepec	133675	
+Escondido	133559	
+Cienfuegos	132770	
+Victoria de las Tunas	132350	
+San Cristóbal de las Casas	132317	
+Sunnyvale	131760	
+Savannah	131510	
+Valle de Santiago	130557	
+Guaymas	130108	
+Soyapango	129800	
+Colima	129454	
+Fontana	128929	
+Orange	128821	
+Dolores Hidalgo	128675	
+Naperville	128358	
+Alexandria	128283	
+Longueuil	127977	
+Lagos de Moreno	127949	
+Piedras Negras	127898	
+Rancho Cucamonga	127743	
+San Miguel	127696	
+Altamira	127490	
+Grand Prairie	127427	
+Túxpam	126475	
+East Los Angeles	126379	
+San Pedro Garza García	126147	
+Fullerton	126003	
+Corona	124966	
+Flint	124943	
+San Pedro de Macorís	124735	
+Paradise	124682	
+Mesquite	124523	
+Sterling Heights	124471	
+Cuauhtémoc	124279	
+Manzanillo	124014	
+Sioux Falls	123975	
+Iguala de la Independencia	123883	
+León	123865	
+Zacatecas	123700	
+New Haven	123626	
+Matanzas	123273	
+Tlajomulco de Zúñiga	123220	
+Topeka	122377	
+Tulancingo de Bravo	121946	
+Concord	121780	
+Zinacantepec	121715	
+Evansville	121582	
+Hartford	121578	
+San Martín Texmelucan	121093	
+Fayetteville	121015	
+Cedar Rapids	120758	
+Elizabeth	120568	
+Lansing	119128	
+Tepatitlán de Morelos	118948	
+Martínez de la Torre	118815	
+Lancaster	118718	
+Fort Collins	118652	
+Orizaba	118488	
+Apatzingán	117849	
+Coral Springs	117549	
+Stamford	117083	
+Atlixco	117019	
+Thousand Oaks	117005	
+Vallejo	116760	
+Palmdale	116670	
+Richmond Hill	116428	
+Columbia	116278	
+Delicias	116132	
+El Monte	115965	
+Abilene	115930	
+Thunder Bay	115913	
+Ixtlahuaca	115548	
+North Las Vegas	115488	
+Nepean	115100	
+Cape Breton	114733	
+East York	114034	
+Ann Arbor	114024	
+Halifax	113910	
+Beaumont	113866	
+Waco	113726	
+Macon	113336	
+Independence	113288	
+Peoria	112936	
+Inglewood	112580	
+El Mante	112453	
+Lerdo	112272	
+Springfield	111454	
+Simi Valley	111351	
+Almoloya de Juárez	110550	
+Acámbaro	110487	
+Acuña	110388	
+Spanish Town	110379	
+Lafayette	110257	
+Gilbert	109697	
+Carrollton	109576	
+Bellevue	109569	
+Manzanillo	109350	
+Cambridge	109186	
+West Valley City	108896	
+Guadalupe	108881	
+Clarksville	108787	
+Costa Mesa	108724	
+San Francisco de Macorís	108485	
+Peoria	108364	
+Huejutla de Reyes	108017	
+South Bend	107789	
+Downey	107323	
+Gloucester	107314	
+Waterbury	107271	
+Manchester	107006	
+Allentown	106632	
+McAllen	106414	
+Joliet	106221	
+Hidalgo	106198	
+Abbotsford	105403	
+Los Cabos	105199	
+Lowell	105167	
+Provo	105166	
+West Covina	105080	
+Comitán de Domínguez	104986	
+Wichita Falls	104197	
+Cunduacán	104164	
+Kingston	103962	
+Río Bravo	103901	
+Erie	103717	
+Daly City	103621	
+Guelph	103593	
+Citrus Heights	103455	
+Norwalk	103298	
+Temapache	102824	
+Gary	102746	
+Berkeley	102743	
+Chilapa de Alvarez	102716	
+Santa Clara	102361	
+Green Bay	102313	
+Cape Coral	102286	
+Le-Cap-Haïtien	102233	
+Arvada	102153	
+Pueblo	102121	
+Saint John´s	101936	
+Sandy	101853	
+Coquitlam	101820	
+Athens-Clarke County	101489	
+Saanich	101388	
+Cambridge	101355	
+Villa Nueva	101295	
+Westminster	100940	
+San Buenaventura	100916	
+Hidalgo del Parral	100881	
+Sancti-Spíritus	100751	
+Gatineau	100702	
+Portsmouth	100565	
+Livonia	100545	
+Burbank	100316	
+San Francisco del Rincón	100149	
+Arecibo	100131	
+Guaynabo	100053	
+Clearwater	99936	
+Taxco de Alarcón	99907	
+Portmore	99799	
+Zumpango	99781	
+San Pedro Cholula	99734	
+Lerma	99714	
+Tecomán	99296	
+Ciego de Ávila	98505	
+Mayagüez	98434	
+Nueva San Salvador	98400	
+Midland	98293	
+Davenport	98256	
+Mission Viejo	98049	
+Miami Beach	97855	
+Las Margaritas	97389	
+Chinandega	97387	
+Cosoleacaque	97199	
+San Luis de la Paz	96763	
+José Azueta	95448	
+Delta	95411	
+Sunrise Manor	95362	
+Santiago Ixcuintla	95311	
+San Felipe	95305	
+Tejupilco	94934	
+New Bedford	94780	
+Tantoyuca	94709	
+El Cajon	94578	
+Salvatierra	94322	
+Norman	94193	
+Richmond	94100	
+Toa Baja	94085	
+Fort-de-France	94050	
+Albany	93994	
+Brockton	93653	
+Tultepec	93364	
+Roanoke	93357	
+Billings	92988	
+Compton	92864	
+Sudbury	92686	
+Temixco	92686	
+Gainesville	92291	
+Fairfield	92256	
+Arden-Arcade	92040	
+Matamoros	91858	
+San Mateo	91799	
+Visalia	91762	
+Boulder	91238	
+Cary	91213	
+Santa Monica	91084	
+Quetzaltenango	90801	
+Fall River	90555	
+Pánuco	90551	
+El Fuerte	89556	
+Kenosha	89447	
+Kelowna	89442	
+San Felipe de Puerto Plata	89423	
+Elgin	89408	
+Odessa	89293	
+Barrie	89269	
+La Ceiba	89200	
+Tierra Blanca	89143	
+Carson	89089	
+Charleston	89063	
+Masaya	88971	
+Apopa	88800	
+Les Abymes	62947	
+Chaguanas	56601	
+Belize City	55810	
+Port-of-Spain	43396	
+Oranjestad	29034	
+Saint John´s	24000	
+George Town	19600	
+Kingstown	17100	
+Roseau	16243	
+Nuuk	13445	
+Charlotte Amalie	13000	
+Basse-Terre	12433	
+Basseterre	11600	
+Road Town	8000	
+Belmopan	7105	
+Bridgetown	6070	
+Saint-Pierre	5808	
+Cockburn Town	4800	
+Saint George´s	4621	
+Willemstad	2345	
+Castries	2301	
+Plymouth	2000	
+Saint George	1800	
+Hamilton	1200	
+South Hill	961	
+The Valley	595	

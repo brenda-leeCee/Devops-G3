@@ -26,7 +26,7 @@ class ReportSelector {
         }
 
         // Welcome message and logo
-        System.out.println("Welcome to Analytics ");
+        System.out.println("Welcome to Airelux Analytics ");
         System.out.println("     /\\        /\\");
         System.out.println("    /  \\      /  \\");
         System.out.println("   /____\\    /____\\");
@@ -106,6 +106,66 @@ class ReportSelector {
         }
     }
 
+    private void handleCapitalCityReports(Scanner scanner) {
+        while (true) {
+            System.out.println("Capital City Reports:");
+            System.out.println("1. Capital cities sorted by population.");
+            System.out.println("2. Capital cities filtered by continent.");
+            System.out.println("3. Capital cities filtered by region.");
+            System.out.println("4. Top N capital cities by population.");
+            System.out.println("5. Back to Report Category");
+            System.out.println();
+
+            System.out.print("Please choose a report to run: ");
+            try {
+                int choice = Integer.parseInt(scanner.nextLine().trim());
+
+                switch (choice) {
+                    case 1:
+                        runReport(scanner, "Capital cities sorted by population",
+                                "SELECT name, population FROM city WHERE id IN (SELECT capital FROM country) ORDER BY population DESC"
+                        );
+                        break;
+                    case 2:
+                        System.out.print("Enter the continent name: ");
+                        String continent = scanner.nextLine().trim();
+                        runReport(scanner, "Capital cities filtered by continent: " + continent,
+                                "SELECT city.name, city.population FROM city JOIN country ON city.id = country.capital WHERE country.continent = ? ORDER BY city.population DESC",
+                                continent);
+                        break;
+                    case 3:
+                        System.out.print("Enter the region name: ");
+                        String region = scanner.nextLine().trim();
+                        runReport(scanner, "Capital cities filtered by region: " + region,
+                                "SELECT city.name, city.population FROM city JOIN country ON city.id = country.capital WHERE country.region = ? ORDER BY city.population DESC",
+                                region);
+                        break;
+                    case 4:
+                        System.out.print("Enter the number of capital cities you want to display (N): ");
+                        try {
+                            int n = Integer.parseInt(scanner.nextLine().trim());
+                            if (n > 0) {
+                                runReport(scanner, "Top " + n + " capital cities by population",
+                                        "SELECT name, population FROM city WHERE id IN (SELECT capital FROM country) ORDER BY population DESC LIMIT " + n
+                                );
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 5:
+                        return; // Back to main menu
+                    default:
+                        System.out.println("Invalid input. Please enter a number between 1 and 5.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
+
     private void handleCountryReports(Scanner scanner) {
         while (true) {
             System.out.println("Country Population Reports:");
@@ -138,7 +198,7 @@ class ReportSelector {
                             int n = Integer.parseInt(scanner.nextLine().trim());
                             if (n > 0) {
                                 runReport(scanner, "Top " + n + " countries by population",
-                                        "SELECT name, population FROM country ORDER BY population DESC LIMIT ?"
+                                        "SELECT name, population FROM country ORDER BY population DESC LIMIT " + n
                                 );
                             } else {
                                 System.out.println("Please enter a positive number.");
@@ -279,7 +339,6 @@ class ReportSelector {
             System.out.println("4. Back to Report Category");
             System.out.println();
 
-
             System.out.print("Please choose a report to run: ");
             try {
                 int choice = Integer.parseInt(scanner.nextLine().trim());
@@ -293,7 +352,8 @@ class ReportSelector {
                                         "FROM city " +
                                         "JOIN country ON city.CountryCode = country.Code " +
                                         "WHERE country.Continent = ? " +
-                                        "ORDER BY city.Population DESC");
+                                        "ORDER BY city.Population DESC",
+                                continent);
                         break;
                     case 2: // Population of cities by region
                         System.out.print("Enter the region name: ");
@@ -303,7 +363,8 @@ class ReportSelector {
                                         "FROM city " +
                                         "JOIN country ON city.CountryCode = country.Code " +
                                         "WHERE country.Region = ? " +
-                                        "ORDER BY city.Population DESC");
+                                        "ORDER BY city.Population DESC",
+                                region);
                         break;
                     case 3: // Population of cities by country
                         System.out.print("Enter the country code: ");
@@ -312,7 +373,8 @@ class ReportSelector {
                                 "SELECT city.Name, city.Population " +
                                         "FROM city " +
                                         "WHERE city.CountryCode = ? " +
-                                        "ORDER BY city.Population DESC");
+                                        "ORDER BY city.Population DESC",
+                                countryCode);
                         break;
                     case 4: // Back to Report Category
                         return;
@@ -325,86 +387,46 @@ class ReportSelector {
         }
     }
 
-    private void handleCapitalCityReports(Scanner scanner) {
-        while (true) {
-            System.out.println("Capital City Reports:");
-            System.out.println("1. Capital cities sorted by population.");
-            System.out.println("2. Capital cities filtered by continent.");
-            System.out.println("3. Capital cities filtered by region.");
-            System.out.println("4. Top N capital cities by population.");
-            System.out.println("5. Back to Report Category");
-            System.out.println();
+    private void runReport(Scanner scanner, String reportName, String query, String parameter) {
+        System.out.println("\nRunning Report: " + reportName);
+        StringBuilder sb = new StringBuilder();
 
-            System.out.print("Please choose a report to run: ");
-            try {
-                int choice = Integer.parseInt(scanner.nextLine().trim());
-
-                switch (choice) {
-                    case 1:
-                        // Case 1: Capital cities sorted by population
-                        runReport(scanner, "Capital cities sorted by population",
-                                "SELECT city.Name, country.Name AS Country, city.Population " +
-                                        "FROM city " +
-                                        "JOIN country ON city.ID = country.Capital " +
-                                        "ORDER BY city.Population DESC");
-                        break;
-
-                    case 2:
-                        // Case 2: Capital cities filtered by continent
-                        System.out.print("Enter the continent: ");
-                        String continent = scanner.nextLine().trim();
-                        runReport(scanner, "Capital cities filtered by continent: " + continent,
-                                "SELECT city.Name, country.Name AS Country, city.Population " +
-                                        "FROM city " +
-                                        "JOIN country ON city.ID = country.Capital " +
-                                        "WHERE country.Continent = ? " +
-                                        "ORDER BY city.Population DESC");
-                        break;
-
-                    case 3:
-                        // Case 3: Capital cities filtered by region
-                        System.out.print("Enter the region: ");
-                        String region = scanner.nextLine().trim();
-                        runReport(scanner, "Capital cities filtered by region: " + region,
-                                "SELECT city.Name, country.Name AS Country, city.Population " +
-                                        "FROM city " +
-                                        "JOIN country ON city.ID = country.Capital " +
-                                        "WHERE country.Region = ? " +
-                                        "ORDER BY city.Population DESC");
-                        break;
-
-                    case 4:
-                        // Case 4: Top N capital cities by population
-                        System.out.print("Enter the number of top capital cities to display (N): ");
-                        try {
-                            int n = Integer.parseInt(scanner.nextLine().trim());
-                            if (n > 0) {
-                                runReport(scanner, "Top " + n + " capital cities by population",
-                                        "SELECT city.Name, country.Name AS Country, city.Population " +
-                                                "FROM city " +
-                                                "JOIN country ON city.ID = country.Capital " +
-                                                "ORDER BY city.Population DESC " +
-                                                "LIMIT ?");
-                            } else {
-                                System.out.println("Please enter a positive number.");
-                            }
-                        } catch (NumberFormatException e) {
-                            System.out.println("Invalid input. Please enter a valid number.");
-                        }
-                        break;
-
-                    case 5:
-                        // Case 5: Back to the main menu
-                        return;
-
-                    default:
-                        System.out.println("Invalid input. Please enter a number between 1 and 5.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid number.");
+        try (PreparedStatement pstmt = con.prepareStatement(query)) {
+            // Set query parameter if required
+            if (query.contains("?")) {
+                pstmt.setString(1, parameter);
             }
+
+            ResultSet rset = pstmt.executeQuery();
+
+            // Build the report content
+            while (rset.next()) {
+                ResultSetMetaData metaData = rset.getMetaData();
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    sb.append(rset.getString(i)).append("\t");
+                }
+                sb.append("\n");
+            }
+
+            // Display the results in the terminal
+            if (sb.length() > 0) {
+                String reportContent = sb.toString();
+                System.out.println("Results:");
+                System.out.println(reportContent);
+
+                // Save the report to a file
+                saveReportToFile(reportContent, "Report_" + reportName.replace(" ", "_"));
+            } else {
+                System.out.println("No results found.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
+
+
+
+
 
     private void handlePopulationReports(Scanner scanner) {
         while (true) {
@@ -423,7 +445,7 @@ class ReportSelector {
                 switch (choice) {
                     case 1:
                         // Total population by continent
-                        runReport(scanner, "Total population by continent",
+                        runPopulationReport(scanner, "Total population by continent",
                                 "SELECT Continent, SUM(Population) AS TotalPopulation " +
                                         "FROM country " +
                                         "GROUP BY Continent " +
@@ -432,7 +454,7 @@ class ReportSelector {
 
                     case 2:
                         // Total population by region
-                        runReport(scanner, "Total population by region",
+                        runPopulationReport(scanner, "Total population by region",
                                 "SELECT Region, SUM(Population) AS TotalPopulation " +
                                         "FROM country " +
                                         "GROUP BY Region " +
@@ -441,7 +463,7 @@ class ReportSelector {
 
                     case 3:
                         // Total population by country
-                        runReport(scanner, "Total population by country",
+                        runPopulationReport(scanner, "Total population by country",
                                 "SELECT Name AS Country, Population " +
                                         "FROM country " +
                                         "ORDER BY Population DESC");
@@ -449,12 +471,12 @@ class ReportSelector {
 
                     case 4:
                         // Percentages within and outside cities
-                        runReport(scanner, "Percentages within and outside cities",
+                        runPopulationReport(scanner, "Percentages within and outside cities",
                                 "SELECT country.Continent, " +
                                         "SUM(country.Population) AS TotalPopulation, " +
                                         "SUM(city.Population) AS PopulationInCities, " +
                                         "(SUM(city.Population) / SUM(country.Population) * 100) AS PercentInCities, " +
-                                        "(1 - (SUM(city.Population) / SUM(country.Population)) * 100) AS PercentOutsideCities " +
+                                        "(100 - (SUM(city.Population) / SUM(country.Population) * 100)) AS PercentOutsideCities " +
                                         "FROM country " +
                                         "LEFT JOIN city ON country.Code = city.CountryCode " +
                                         "GROUP BY country.Continent " +
@@ -472,6 +494,59 @@ class ReportSelector {
                 System.out.println("Invalid input. Please enter a valid number.");
             }
         }
+    }
+
+    private void runPopulationReport(Scanner scanner, String reportName, String query) {
+        System.out.println("\nRunning Report: " + reportName);
+        StringBuilder sb = new StringBuilder();
+
+        try (PreparedStatement pstmt = con.prepareStatement(query)) {
+            ResultSet rset = pstmt.executeQuery();
+
+            // Build the report content
+            while (rset.next()) {
+                ResultSetMetaData metaData = rset.getMetaData();
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    sb.append(rset.getString(i)).append("\t");
+                }
+                sb.append("\n");
+            }
+
+            // Display the results in the terminal
+            if (sb.length() > 0) {
+                String reportContent = sb.toString();
+                System.out.println("Results:");
+                System.out.println(reportContent);
+
+                // Save the report to a file
+                saveReportToFile(reportContent, "Report_" + reportName.replace(" ", "_"));
+            } else {
+                System.out.println("No results found.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
+        }
+    }
+
+    private void saveReportToFileBasic(String content, String fileName) {
+        String outputDir = "src/output";
+        File dir = new File(outputDir);
+
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
+        File file = new File(dir, fileName + ".txt");
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(content);
+            System.out.println("Report saved to " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.println("Failed to write report to file. Error: " + e.getMessage());
+        }
+    }
+
+    private void saveReportToFileAdvanced(String content, String fileName) {
+        // Similar implementation but with additional logic or handling
     }
 
 
@@ -494,7 +569,7 @@ class ReportSelector {
                 switch (choice) {
                     case 1:
                         // Cities sorted by population
-                        runReport(scanner, "Cities sorted by population",
+                        runCityReport(scanner, "Cities sorted by population",
                                 "SELECT Name, Population FROM city ORDER BY Population DESC");
                         break;
 
@@ -502,46 +577,50 @@ class ReportSelector {
                         // Cities filtered by continent
                         System.out.print("Enter the continent: ");
                         String continent = scanner.nextLine().trim();
-                        runReport(scanner, "Cities filtered by continent: " + continent,
+                        runCityReport(scanner, "Cities filtered by continent: " + continent,
                                 "SELECT city.Name, city.Population " +
                                         "FROM city " +
                                         "JOIN country ON city.CountryCode = country.Code " +
                                         "WHERE country.Continent = ? " +
-                                        "ORDER BY city.Population DESC");
+                                        "ORDER BY city.Population DESC",
+                                continent);
                         break;
 
                     case 3:
                         // Cities filtered by region
                         System.out.print("Enter the region: ");
                         String region = scanner.nextLine().trim();
-                        runReport(scanner, "Cities filtered by region: " + region,
+                        runCityReport(scanner, "Cities filtered by region: " + region,
                                 "SELECT city.Name, city.Population " +
                                         "FROM city " +
                                         "JOIN country ON city.CountryCode = country.Code " +
                                         "WHERE country.Region = ? " +
-                                        "ORDER BY city.Population DESC");
+                                        "ORDER BY city.Population DESC",
+                                region);
                         break;
 
                     case 4:
                         // Cities filtered by country
                         System.out.print("Enter the country code (e.g., USA): ");
                         String countryCode = scanner.nextLine().trim();
-                        runReport(scanner, "Cities filtered by country: " + countryCode,
+                        runCityReport(scanner, "Cities filtered by country: " + countryCode,
                                 "SELECT Name, Population " +
                                         "FROM city " +
                                         "WHERE CountryCode = ? " +
-                                        "ORDER BY Population DESC");
+                                        "ORDER BY Population DESC",
+                                countryCode);
                         break;
 
                     case 5:
                         // Cities filtered by district
                         System.out.print("Enter the district: ");
                         String district = scanner.nextLine().trim();
-                        runReport(scanner, "Cities filtered by district: " + district,
+                        runCityReport(scanner, "Cities filtered by district: " + district,
                                 "SELECT Name, Population " +
                                         "FROM city " +
                                         "WHERE District = ? " +
-                                        "ORDER BY Population DESC");
+                                        "ORDER BY Population DESC",
+                                district);
                         break;
 
                     case 6:
@@ -550,11 +629,12 @@ class ReportSelector {
                         try {
                             int n = Integer.parseInt(scanner.nextLine().trim());
                             if (n > 0) {
-                                runReport(scanner, "Top " + n + " cities by population",
+                                runCityReport(scanner, "Top " + n + " cities by population",
                                         "SELECT Name, Population " +
                                                 "FROM city " +
                                                 "ORDER BY Population DESC " +
-                                                "LIMIT ?");
+                                                "LIMIT ?",
+                                        n);
                             } else {
                                 System.out.println("Please enter a positive number.");
                             }
@@ -573,6 +653,69 @@ class ReportSelector {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid number.");
             }
+        }
+    }
+
+    private void runCityReport(Scanner scanner, String reportName, String query, Object... parameters) {
+        System.out.println("\nRunning Report: " + reportName);
+        StringBuilder sb = new StringBuilder();
+
+        try (PreparedStatement pstmt = con.prepareStatement(query)) {
+            // Set query parameters if required
+            for (int i = 0; i < parameters.length; i++) {
+                if (parameters[i] instanceof String) {
+                    pstmt.setString(i + 1, (String) parameters[i]);
+                } else if (parameters[i] instanceof Integer) {
+                    pstmt.setInt(i + 1, (Integer) parameters[i]);
+                }
+            }
+
+            ResultSet rset = pstmt.executeQuery();
+
+            // Build the report content
+            while (rset.next()) {
+                ResultSetMetaData metaData = rset.getMetaData();
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    sb.append(rset.getString(i)).append("\t");
+                }
+                sb.append("\n");
+            }
+
+            // Display the results in the terminal
+            if (sb.length() > 0) {
+                String reportContent = sb.toString();
+                System.out.println("Results:");
+                System.out.println(reportContent);
+
+                // Save the report to a file
+                saveReportToFile(reportContent, "Report_" + reportName.replace(" ", "_"));
+            } else {
+                System.out.println("No results found.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
+        }
+    }
+
+    private void saveReportToFile(String content, String fileName, boolean detailed) {
+        String outputDir = "src/output";
+        File dir = new File(outputDir);
+
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
+        File file = new File(dir, fileName + ".txt");
+        try (FileWriter writer = new FileWriter(file)) {
+            if (detailed) {
+                // Write detailed content
+            } else {
+                // Write basic content
+            }
+            writer.write(content);
+            System.out.println("Report saved to " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.println("Failed to write report to file. Error: " + e.getMessage());
         }
     }
 
@@ -627,52 +770,59 @@ class ReportSelector {
         }
     }
 
+    // Updated method for running reports
     private void runReport(Scanner scanner, String reportName, String query) {
-        while (true) {
-            System.out.println("\nRunning Report: " + reportName);
-            StringBuilder sb = new StringBuilder();
+        System.out.println("\nRunning Report: " + reportName);
+        StringBuilder sb = new StringBuilder();
 
-            try {
-                Statement stmt = con.createStatement();
-                ResultSet rset = stmt.executeQuery(query);
+        try (Statement stmt = con.createStatement()) {
+            ResultSet rset = stmt.executeQuery(query);
 
-                while (rset.next()) {
-                    ResultSetMetaData metaData = rset.getMetaData();
-                    for (int i = 1; i <= metaData.getColumnCount(); i++) {
-                        sb.append(rset.getString(i)).append("\t");
-                    }
-                    sb.append("\n");
+            // Build the report content
+            while (rset.next()) {
+                ResultSetMetaData metaData = rset.getMetaData();
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    sb.append(rset.getString(i)).append("\t");
                 }
+                sb.append("\n");
+            }
+
+            // Display the results in the terminal
+            if (sb.length() > 0) {
+                String reportContent = sb.toString();
                 System.out.println("Results:");
-                System.out.println(sb.toString());
-            } catch (SQLException e) {
-                System.out.println("Failed to execute query. Error: " + e.getMessage());
-            }
+                System.out.println(reportContent);
 
-            System.out.println("\nWhat would you like to do next?");
-            System.out.println("1. Run Report Again");
-            System.out.println("2. Back to Report Category");
-            System.out.print("Enter your choice: ");
-
-            try {
-                int choice = Integer.parseInt(scanner.nextLine().trim());
-                switch (choice) {
-                    case 1:
-                        continue; // Run the report again
-                    case 2:
-                        return; // Back to the submenu
-                    default:
-                        System.out.println("Invalid input. Please enter 1 or 2.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid number.");
+                // Save the report to a file
+                saveReportToFile(reportContent, "Report_" + reportName.replace(" ", "_"));
+            } else {
+                System.out.println("No results found.");
             }
+        } catch (SQLException e) {
+            System.out.println("Failed to execute query. Error: " + e.getMessage());
         }
     }
 
-    /**
-     * Connect to the MySQL database.
-     */
+    // Single version of saveReportToFile method to avoid ambiguity
+    private void saveReportToFileUnique(String content, String fileName, boolean append) {
+        String outputDir = "src/output";
+        File dir = new File(outputDir);
+
+        // Ensure the directory exists
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+
+        File file = new File(dir, fileName + ".txt");
+        try (FileWriter writer = new FileWriter(file, append)) { // Append if needed
+            writer.write(content);
+            System.out.println("Report saved to " + file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.println("Failed to write report to file. Error: " + e.getMessage());
+        }
+    }
+
+    // Method for connecting to the MySQL database
     public void connect(String conString, int delay) {
         try {
             // Load Database driver
