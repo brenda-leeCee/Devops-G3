@@ -4,7 +4,7 @@ import java.io.*;
 import java.sql.*;
 import java.util.Scanner;
 
-class reportselector {
+class countryreports {
     /**
      * Connection to MySQL database.
      */
@@ -12,7 +12,7 @@ class reportselector {
 
     public static void main(String[] args) {
         // Create an instance of ReportSelector
-        reportselector app = new reportselector();
+        countryreports app = new countryreports();
 
         // Connect to the database
         if (args.length < 1) {
