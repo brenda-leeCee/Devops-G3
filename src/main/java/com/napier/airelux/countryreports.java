@@ -10,7 +10,7 @@ class countryreports {
      */
     private static Connection con = null;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         // Create an instance of ReportSelector
         countryreports app = new countryreports();
 
@@ -31,6 +31,18 @@ class countryreports {
         app.disconnect();
     }
 
+    public void disconnect() {
+        try {
+            if (con != null) {
+                con.close();
+                System.out.println("Disconnected from the database.");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error closing connection to database: " + e.getMessage());
+        }
+    }
+
+
     /**
      * Handles the Country Population Reports submenu.
      */
@@ -45,6 +57,13 @@ class countryreports {
             System.out.println();
 
             System.out.print("Please choose a report to run: ");
+
+            // Check if input is available before reading it
+            if (!scanner.hasNextLine()) {
+                System.out.println("No input detected. Exiting program.");
+                break;
+            }
+
             try {
                 int choice = Integer.parseInt(scanner.nextLine().trim());
 
@@ -236,17 +255,4 @@ class countryreports {
         }
     }
 
-    /**
-     * Disconnect from the MySQL database.
-     */
-    public void disconnect() {
-        try {
-            if (con != null) {
-                con.close();
-                System.out.println("Disconnected from the database.");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error closing connection to database: " + e.getMessage());
-        }
-    }
 }
