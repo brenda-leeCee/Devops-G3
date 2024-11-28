@@ -2,6 +2,8 @@ package com.napier.airelux;
 
 import org.junit.jupiter.api.*;
 
+import java.time.Duration;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class IntegrationTest {
@@ -49,6 +51,53 @@ class IntegrationTest {
         });
         assertTrue(exception.getMessage().contains("Failed to connect"),
                 "Error message should indicate connection failure.");
+    }
+
+    @Test
+    public void testRunReportWithInvalidQuery() {
+        // Test running an invalid SQL query
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            reportSelector.runReport("SELECT * FROM invalid_table");
+        });
+        assertTrue(exception.getMessage().contains("Error executing query"),
+                "Error message should indicate query execution error.");
+    }
+
+    @Test
+    public void testRunReportWithEmptyQuery() {
+        // Test running an empty query
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            reportSelector.runReport("");
+        });
+        assertTrue(exception.getMessage().contains("Query cannot be null or empty"),
+                "Error message should indicate that query is null or empty.");
+    }
+
+    @Test
+    public void testRunReportWithNullQuery() {
+        // Test running a null query
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            reportSelector.runReport(null);
+        });
+        assertTrue(exception.getMessage().contains("Query cannot be null or empty"),
+                "Error message should indicate that query is null or empty.");
+    }
+
+    @Test
+    public void testReconnectToDatabase() {
+        // Test reconnecting to the database
+        reportSelector.disconnect();
+        assertNull(reportSelector.getConnection(), "Connection should be null after disconnect.");
+        reportSelector.connect("localhost:33060", 0);
+        assertNotNull(reportSelector.getConnection(), "Connection should be re-established.");
+    }
+
+    @Test
+    public void testQueryExecutionTime() {
+        // Test the time it takes to execute a query
+        assertTimeoutPreemptively(Duration.ofSeconds(5), () -> {
+            reportSelector.runReport("SELECT * FROM country");
+        }, "Query execution should complete within 5 seconds.");
     }
 
     @AfterAll

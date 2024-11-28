@@ -1,6 +1,10 @@
 package com.napier.airelux;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Scanner;
 
 class ReportSelector {
 
@@ -36,7 +40,6 @@ class ReportSelector {
      */
     public void connect(String conString, int delay) {
         try {
-            // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("Could not load SQL driver", e);
@@ -44,32 +47,31 @@ class ReportSelector {
 
         int retries = 10;
         for (int i = 0; i < retries; ++i) {
-            System.out.println("Connecting to database...");
             try {
-                // Wait a bit for db to start
                 Thread.sleep(delay);
                 con = DriverManager.getConnection("jdbc:mysql://" + conString
                         + "/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
-                return;
-            } catch (SQLException sqle) {
+                return; // Successful connection, exit method
+            } catch (SQLException | InterruptedException e) {
                 System.out.println("Failed to connect to database attempt " + i);
-                System.out.println(sqle.getMessage());
-            } catch (InterruptedException ie) {
-                System.out.println("Thread interrupted? Should not happen.");
+                if (i == retries - 1) {
+                    throw new RuntimeException("Failed to connect to database after " + retries + " attempts", e);
+                }
             }
         }
-        // Throw exception if all retries fail
-        throw new RuntimeException("Failed to connect to database after " + retries + " attempts.");
     }
 
     /**
      * Run a SQL report query and print the results.
      */
     public void runReport(String query) {
+        if (query == null || query.isEmpty()) {
+            throw new IllegalArgumentException("Query cannot be null or empty");
+        }
+
         if (con == null) {
-            System.out.println("No active database connection.");
-            return;
+            throw new IllegalStateException("No active database connection");
         }
 
         try (Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
@@ -90,7 +92,7 @@ class ReportSelector {
                 System.out.println();
             }
         } catch (SQLException e) {
-            System.out.println("Error executing query: " + e.getMessage());
+            throw new RuntimeException("Error executing query", e);
         }
     }
 
@@ -108,6 +110,13 @@ class ReportSelector {
                 con = null; // Ensure the connection is set to null
             }
         }
+    }
+
+    /**
+     * Set the database connection (used for unit testing).
+     */
+    public void setConnection(Connection connection) {
+        con = connection;
     }
 
     /**
