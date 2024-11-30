@@ -1,5 +1,0 @@
-Chinese	19.606722500	
-Hindi	6.672969000	
-Spanish	5.840501600	
-English	5.709691900	
-Arabic	3.846831300	
