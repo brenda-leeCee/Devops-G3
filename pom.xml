@@ -12,10 +12,11 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mysql.connector.version>8.0.33</mysql.connector.version>
+        <mysql.connector.version>8.0.32</mysql.connector.version>
         <junit.jupiter.version>5.10.0</junit.jupiter.version>
         <mockito.version>4.11.0</mockito.version>
         <bytebuddy.version>1.14.5</bytebuddy.version>
+        <jacoco.version>0.8.8</jacoco.version>
     </properties>
 
     <dependencies>
@@ -23,7 +24,8 @@
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>${mysql.connector.version}</version>
+            <version>8.0.33</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -105,9 +107,34 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <argLine>-Dnet.bytebuddy.experimental=true</argLine>
+                    <argLine>@{surefire.argLine}</argLine>
                 </configuration>
+            </plugin>
+
+            <!-- JaCoCo Maven Plugin for Code Coverage -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <configuration>
+                            <destFile>${project.build.directory}/jacoco.exec</destFile>
+                            <propertyName>surefire.argLine</propertyName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <!-- Maven Clean Plugin -->
