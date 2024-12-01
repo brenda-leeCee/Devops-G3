@@ -254,5 +254,5 @@ class countryreports {
             System.out.println("Failed to connect to the database: " + e.getMessage());
         }
     }
-}
 
+}
