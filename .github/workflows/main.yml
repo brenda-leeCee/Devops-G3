@@ -19,3 +19,5 @@ jobs:
         run: docker compose up --abort-on-container-exit
       - name: view logs
         run: docker logs devops-g3-countryreports-1
+      - name: Copy output files
+        run: docker cp devops-g3-countryreports-1:/app/output ./output
