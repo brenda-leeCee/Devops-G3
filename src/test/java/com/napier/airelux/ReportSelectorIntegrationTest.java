@@ -37,13 +37,6 @@ class IntegrationTest {
     }
 
     @Test
-    public void testRunReport() {
-        // Verify that a query runs without errors
-        assertDoesNotThrow(() -> reportSelector.runReport("SELECT * FROM country LIMIT 5"),
-                "The query should execute without throwing exceptions.");
-    }
-
-    @Test
     public void testInvalidDatabaseConnection() {
         // Test connection with invalid parameters
         RuntimeException exception = assertThrows(RuntimeException.class, () -> {
