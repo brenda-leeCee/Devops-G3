@@ -3,27 +3,78 @@ on: push
 
 jobs:
   build:
-    name: analysis action
+    name: Build and Package App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        run: mvn package
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+      - name: Run docker compose
+        run: docker compose up --abort-on-container-exit -d
+      - name: Wait for MySQL to be ready
+        run: |
+          until docker exec world-db-container-name mysqladmin --user=root --password=rootping --silent; do
+            echo "Waiting for MySQL to be ready..."
+            sleep 5
+          done
+      - name: View logs
+        run: docker logs devops-g3-app-1
+
+  UnitTests:
+    name: Unit Tests
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
-          distribution: 'adopt'
-      - name: Package with Maven
-        run: mvn package
-      - name: Run docker compose
-        run: docker compose up --abort-on-container-exit
-      - name: view logs
-        run: docker logs devops-g3-app-1
-      - name: Copy Output
-        run: docker container cp devops-g3-app-1:./tmp/output ./
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Unit Tests
+        run: mvn -Dtest=com.napier.devops-g3.ReportSelector test
+      - name: CodeCov
+        uses: codecov/codecov-action@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          publish_branch: output
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./target/site/jacoco
+          flags: Unit Tests
+          verbose: true
+
+  IntegrationTests:
+    name: Integration Tests
+    needs: build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run Integration Tests
+        run: |
+          docker compose up --abort-on-container-exit -d
+          # Wait for MySQL to be ready (ensure database readiness)
+          until docker exec world-db-container-name mysqladmin --user=root --password=root ping --silent; do
+            echo "Waiting for MySQL to be ready..."
+            sleep 5
+          done
+          mvn -Dtest=com.napier.devops.g3.ReportSelector.IntegrationTest test
+          docker compose down --volumes --remove-orphans
+      - name: CodeCov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./target/site/jacoco
+          flags: Integration Tests
+          verbose: true
