@@ -367,7 +367,7 @@ class ReportSelector {
                                 region);
                         break;
                     case 3: // Population of cities by country
-                        System.out.print("Enter the country code: ");
+                        System.out.print("Enter the ISO country code: ");
                         String countryCode = scanner.nextLine().trim();
                         runReport(scanner, "Population of cities by country: " + countryCode,
                                 "SELECT city.Name, city.Population " +
