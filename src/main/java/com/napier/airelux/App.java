@@ -27,13 +27,7 @@ class ReportSelector {
 
         // Welcome message and logo
         System.out.println("Welcome to Airelux Analytics ");
-        System.out.println("     /\\        /\\");
-        System.out.println("    /  \\      /  \\");
-        System.out.println("   /____\\    /____\\");
-        System.out.println("  /      \\  /      \\");
-        System.out.println(" /        \\/        \\");
-        System.out.println("AA - Always Ahead");
-        System.out.println();
+
 
         System.out.println("Press Enter to proceed or type 'exit' to quit.");
         Scanner scanner = new Scanner(System.in);
@@ -58,6 +52,7 @@ class ReportSelector {
         this.con = connection;
     }
 
+    //Menu Options
     private void showReportSelection(Scanner scanner) {
         while (true) {
             System.out.println("Main Menu:");
@@ -106,6 +101,7 @@ class ReportSelector {
         }
     }
 
+    //Method responsible for Capital City Reports
     private void handleCapitalCityReports(Scanner scanner) {
         while (true) {
             System.out.println("Capital City Reports:");
@@ -113,7 +109,9 @@ class ReportSelector {
             System.out.println("2. Capital cities filtered by continent.");
             System.out.println("3. Capital cities filtered by region.");
             System.out.println("4. Top N capital cities by population.");
-            System.out.println("5. Back to Report Category");
+            System.out.println("5. Top N capital cities by population in continent.");
+            System.out.println("6. Top N capital cities by population in region.");
+            System.out.println("7. Back to Report Category");
             System.out.println();
 
             System.out.print("Please choose a report to run: ");
@@ -156,9 +154,67 @@ class ReportSelector {
                         }
                         break;
                     case 5:
+                        System.out.print("Enter the continent name: ");
+                        String topContinent = scanner.nextLine().trim();
+                        System.out.print("Enter the number of capital cities you want to display (N): ");
+                        try {
+                            int nContinent = Integer.parseInt(scanner.nextLine().trim());
+                            if (nContinent > 0) {
+                                runReport(scanner, "Capital Cities sorted by population in continent",
+                                        "SELECT city.name AS \"City Name\", country.name AS \"Country Name\", city.Population \n" +
+                                                "\n" +
+                                                "FROM city \n" +
+                                                "\n" +
+                                                "JOIN country ON \n" +
+                                                "\n" +
+                                                "country.capital = city.ID \n" +
+                                                "\n" +
+                                                "WHERE country.continent = \"Asia\" \n" +
+                                                "\n" +
+                                                "ORDER BY city.population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5");
+
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 6:
+                        System.out.print("Enter the region name: ");
+                        String topRegion = scanner.nextLine().trim();
+                        System.out.print("Enter the number of capital cities you want to display (N): ");
+                        try {
+                            int nRegion = Integer.parseInt(scanner.nextLine().trim());
+                            if (nRegion > 0) {
+                                runReport(scanner, "Countries sorted by population",
+                                        "SELECT city.name AS \"City Name\", country.name AS \"Country Name\", city.Population \n" +
+                                                "\n" +
+                                                "FROM city \n" +
+                                                "\n" +
+                                                "JOIN country ON \n" +
+                                                "\n" +
+                                                "country.capital = city.ID \n" +
+                                                "\n" +
+                                                "WHERE country.region = \"Caribbean\" \n" +
+                                                "\n" +
+                                                "ORDER BY city.population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5; "
+                                );
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 7:
                         return; // Back to main menu
                     default:
-                        System.out.println("Invalid input. Please enter a number between 1 and 5.");
+                        System.out.println("Invalid input. Please enter a number between 1 and 7.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid number.");
@@ -173,7 +229,9 @@ class ReportSelector {
             System.out.println("2. Countries filtered by continent.");
             System.out.println("3. Countries filtered by region.");
             System.out.println("4. Top N countries by population.");
-            System.out.println("5. Back to Report Category");
+            System.out.println("5. Top N countries by continent.");
+            System.out.println("6. Top N countries by region.");
+            System.out.println("7. Back to Report Category");
             System.out.println();
 
             System.out.print("Please choose a report to run: ");
@@ -208,6 +266,56 @@ class ReportSelector {
                         }
                         break;
                     case 5:
+                        System.out.print("Enter the continent name: ");
+                        String topContinent = scanner.nextLine().trim();
+                        System.out.print("Enter the number of countries you want to display (N): ");
+                        try {
+                            int nContinent = Integer.parseInt(scanner.nextLine().trim());
+                            if (nContinent > 0) {
+                                runReport(scanner, "Countries sorted by population in continent",
+                                        "SELECT code, name, continent, region, population, capital  \n" +
+                                                "\n" +
+                                                "FROM country \n" +
+                                                "\n" +
+                                                "WHERE continent = \"Asia\" \n" +
+                                                "\n" +
+                                                "ORDER BY population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5");
+
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 6:
+                        System.out.print("Enter the region name: ");
+                        String topRegion = scanner.nextLine().trim();
+                        System.out.print("Enter the number of countries you want to display (N): ");
+                        try {
+                            int nRegion = Integer.parseInt(scanner.nextLine().trim());
+                            if (nRegion > 0) {
+                                runReport(scanner, "Countries sorted by population in region",
+                                        "SELECT code, name, continent, region, population, capital  \n" +
+                                                "\n" +
+                                                "FROM country \n" +
+                                                "\n" +
+                                                "WHERE region = \"Caribbean\" \n" +
+                                                "\n" +
+                                                "ORDER BY population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5"
+                                );
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 7:
                         return; // Back to main menu
                     default:
                         System.out.println("Invalid input. Please enter a number between 1 and 5.");
@@ -336,7 +444,11 @@ class ReportSelector {
             System.out.println("1. Population of cities by continent.");
             System.out.println("2. Population of cities by region.");
             System.out.println("3. Population of cities by country.");
-            System.out.println("4. Back to Report Category");
+            System.out.println("4. Top N of populated cities by country.");
+            System.out.println("5. Top N populated cities in a continent");
+            System.out.println("6. Top N populated cities in a region");
+            System.out.println("7. Top N populated cities in a district");
+            System.out.println("8. Back to Report Category");
             System.out.println();
 
             System.out.print("Please choose a report to run: ");
@@ -376,10 +488,64 @@ class ReportSelector {
                                         "ORDER BY city.Population DESC",
                                 countryCode);
                         break;
-                    case 4: // Back to Report Category
+                    case 4:
+                        System.out.print("Enter the ISO Country code: ");
+                        String topContinent = scanner.nextLine().trim();
+                        System.out.print("Enter the number of countries you want to display (N): ");
+                        try {
+                            int nContinent = Integer.parseInt(scanner.nextLine().trim());
+                            if (nContinent > 0) {
+                                runReport(scanner, "Top N Cities By Country",
+                                        "SELECT city.name AS \"City Name\", country.name AS \"Country Name\", District, city.Population \n" +
+                                                "\n" +
+                                                "FROM city \n" +
+                                                "\n" +
+                                                "JOIN country ON \n" +
+                                                "\n" +
+                                                "city.countrycode = country.code \n" +
+                                                "\n" +
+                                                "WHERE country.name = \"India\" \n" +
+                                                "\n" +
+                                                "ORDER BY population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5");
+
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 6:
+                        System.out.print("Enter the region name: ");
+                        String topRegion = scanner.nextLine().trim();
+                        System.out.print("Enter the number of countries you want to display (N): ");
+                        try {
+                            int nRegion = Integer.parseInt(scanner.nextLine().trim());
+                            if (nRegion > 0) {
+                                runReport(scanner, "Countries sorted by population in region",
+                                        "SELECT code, name, continent, region, population, capital  \n" +
+                                                "\n" +
+                                                "FROM country \n" +
+                                                "\n" +
+                                                "WHERE region = \"Caribbean\" \n" +
+                                                "\n" +
+                                                "ORDER BY population DESC \n" +
+                                                "\n" +
+                                                "LIMIT 5"
+                                );
+                            } else {
+                                System.out.println("Please enter a positive number.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input. Please enter a valid number.");
+                        }
+                        break;
+                    case 8: // Back to Report Category
                         return;
                     default:
-                        System.out.println("Invalid input. Please enter a number between 1 and 4.");
+                        System.out.println("Invalid input. Please enter a number between 1 and 8.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid number.");
@@ -559,6 +725,7 @@ class ReportSelector {
             System.out.println("4. Cities filtered by country.");
             System.out.println("5. Cities filtered by district.");
             System.out.println("6. Top N cities by population.");
+
             System.out.println("7. Back to Report Category");
             System.out.println();
 
