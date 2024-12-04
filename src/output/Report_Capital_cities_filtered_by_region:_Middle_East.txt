@@ -1,0 +1,18 @@
+Baghdad	4336000	
+Riyadh	3324000	
+Ankara	3038159	
+Bakı	1787800	
+Damascus	1347000	
+Yerevan	1248700	
+Tbilisi	1235200	
+Beirut	1100000	
+Amman	1000000	
+Jerusalem	633700	
+Sanaa	503600	
+Abu Dhabi	398695	
+Doha	355000	
+Gaza	353632	
+Nicosia	195000	
+al-Manama	148000	
+Masqat	51969	
+Kuwait	28859	

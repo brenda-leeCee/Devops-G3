@@ -1,0 +1,24 @@
+La Habana	2256000	
+Santo Domingo de Guzmán	1609966	
+Port-au-Prince	884472	
+San Juan	434374	
+Nassau	172000	
+Kingston	103962	
+Fort-de-France	94050	
+Port-of-Spain	43396	
+Oranjestad	29034	
+Saint John´s	24000	
+George Town	19600	
+Kingstown	17100	
+Roseau	16243	
+Charlotte Amalie	13000	
+Basse-Terre	12433	
+Basseterre	11600	
+Road Town	8000	
+Bridgetown	6070	
+Cockburn Town	4800	
+Saint George´s	4621	
+Willemstad	2345	
+Castries	2301	
+Plymouth	2000	
+The Valley	595	

@@ -1,0 +1,51 @@
+Seoul	9981619	
+Jakarta	9604900	
+Tokyo	7980230	
+Peking	7472000	
+Teheran	6758845	
+Bangkok	6320174	
+Baghdad	4336000	
+Singapore	4017733	
+Dhaka	3612850	
+Rangoon (Yangon)	3361700	
+Riyadh	3324000	
+Ankara	3038159	
+Taipei	2641312	
+Pyongyang	2484000	
+Toskent	2117500	
+Bakı	1787800	
+Kabul	1780000	
+Manila	1581082	
+Hanoi	1410000	
+Damascus	1347000	
+Victoria	1312637	
+Kuala Lumpur	1297526	
+Yerevan	1248700	
+Tbilisi	1235200	
+Beirut	1100000	
+Amman	1000000	
+Ulan Bator	773700	
+Colombo	645000	
+Jerusalem	633700	
+Kathmandu	591835	
+Bishkek	589400	
+Phnom Penh	570155	
+Ashgabat	540600	
+Vientiane	531800	
+Islamabad	524500	
+Dushanbe	524000	
+Sanaa	503600	
+Macao	437500	
+Abu Dhabi	398695	
+Doha	355000	
+Gaza	353632	
+Astana	311200	
+New Delhi	301297	
+Nicosia	195000	
+al-Manama	148000	
+Male	71000	
+Masqat	51969	
+Dili	47900	
+Kuwait	28859	
+Thimphu	22000	
+Bandar Seri Begawan	21484	

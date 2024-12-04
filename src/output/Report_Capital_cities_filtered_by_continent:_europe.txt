@@ -1,0 +1,46 @@
+Moscow	8389200	
+London	7285000	
+Berlin	3386667	
+Madrid	2879052	
+Roma	2643581	
+Kyiv	2624000	
+Paris	2125246	
+Bucuresti	2016131	
+Budapest	1811552	
+Minsk	1674000	
+Warszawa	1615369	
+Wien	1608144	
+Beograd	1204000	
+Praha	1181126	
+Sofija	1122302	
+Athenai	772072	
+Riga	764328	
+Stockholm	750348	
+Amsterdam	731200	
+Chisinau	719900	
+Zagreb	706770	
+Vilnius	577969	
+Lisboa	563210	
+Helsinki [Helsingfors]	555474	
+Oslo	508726	
+København	495699	
+Dublin	481854	
+Bratislava	448292	
+Skopje	444299	
+Tallinn	403981	
+Sarajevo	360000	
+Ljubljana	270986	
+Tirana	270000	
+Bruxelles [Brussel]	133859	
+Bern	122700	
+Reykjavík	109184	
+Luxembourg [Luxemburg/Lëtzebuerg]	80700	
+Gibraltar	27025	
+Andorra la Vella	21189	
+Tórshavn	14542	
+Valletta	7073	
+Vaduz	5043	
+San Marino	2294	
+Longyearbyen	1438	
+Monaco-Ville	1234	
+Città del Vaticano	455	
