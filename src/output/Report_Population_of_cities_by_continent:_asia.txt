@@ -1,0 +1,1766 @@
+Mumbai (Bombay)	10500000	
+Seoul	9981619	
+Shanghai	9696300	
+Jakarta	9604900	
+Karachi	9269265	
+Istanbul	8787958	
+Tokyo	7980230	
+Peking	7472000	
+Delhi	7206704	
+Teheran	6758845	
+Chongqing	6351600	
+Bangkok	6320174	
+Tianjin	5286800	
+Lahore	5063499	
+Calcutta [Kolkata]	4399819	
+Wuhan	4344600	
+Baghdad	4336000	
+Harbin	4289800	
+Shenyang	4265200	
+Kanton [Guangzhou]	4256300	
+Singapore	4017733	
+Ho Chi Minh City	3980000	
+Chennai (Madras)	3841396	
+Pusan	3804522	
+Dhaka	3612850	
+Rangoon (Yangon)	3361700	
+Chengdu	3361500	
+Jokohama [Yokohama]	3339594	
+Riyadh	3324000	
+Ankara	3038159	
+Hyderabad	2964638	
+Ahmedabad	2876710	
+Nanking [Nanjing]	2870300	
+Changchun	2812000	
+Xi´an	2761400	
+Dalian	2697000	
+Surabaya	2663820	
+Bangalore	2660088	
+Taipei	2641312	
+Qingdao	2596000	
+Osaka	2595674	
+Inchon	2559424	
+Taegu	2548568	
+Pyongyang	2484000	
+Bandung	2429000	
+Jinan	2278100	
+Hangzhou	2190500	
+Quezon	2173831	
+Nagoya	2154376	
+Izmir	2130359	
+Toskent	2117500	
+Zhengzhou	2107200	
+Jedda	2046300	
+Shijiazhuang	2041500	
+Kowloon and New Kowloon	1987996	
+Faisalabad	1977246	
+Taiyuan	1968400	
+Mashhad	1887405	
+Kanpur	1874409	
+Medan	1843919	
+Kunming	1829500	
+Changsha	1809800	
+Sapporo	1790886	
+Bakı	1787800	
+Kabul	1780000	
+Nanchang	1691600	
+Nagpur	1624752	
+Lucknow	1619115	
+Fuzhou	1593800	
+Manila	1581082	
+Pune	1566651	
+Lanzhou	1565800	
+Surat	1498817	
+Kaohsiung	1475505	
+Guiyang	1465200	
+Kioto	1461974	
+Jaipur	1458483	
+Taejon	1425835	
+Kobe	1425139	
+Hanoi	1410000	
+Rawalpindi	1406214	
+Chittagong	1392860	
+Ningbo	1371200	
+Hefei	1369100	
+Kwangju	1368341	
+Damascus	1347000	
+Victoria	1312637	
+Urumtši [Ürümqi]	1310100	
+Fukuoka	1308379	
+Kuala Lumpur	1297526	
+Esfahan	1266072	
+Aleppo	1261983	
+Yerevan	1248700	
+Tbilisi	1235200	
+Palembang	1222764	
+Kawasaki	1217359	
+Anshan	1200000	
+Fushun	1200000	
+Tangerang	1198300	
+Tabriz	1191043	
+Multan	1182441	
+Kalookan	1177604	
+Nanning	1161800	
+Hyderabad	1151274	
+Davao	1147116	
+Zibo	1140000	
+Adana	1131198	
+Almaty	1129400	
+Gujranwala	1124749	
+Hiroshima	1119117	
+Semarang	1104405	
+Beirut	1100000	
+Bursa	1095842	
+Indore	1091674	
+Ulsan	1084891	
+Qiqihar	1070000	
+Bhopal	1062771	
+Ujung Pandang	1060257	
+Shiraz	1053025	
+Ludhiana	1042740	
+Jilin	1040000	
+Tangshan	1040000	
+Vadodara (Baroda)	1031346	
+Kitakyushu	1016264	
+Kalyan	1014557	
+Amman	1000000	
+Sendai	989975	
+Peshawar	988005	
+Baotou	980000	
+Madurai	977856	
+Mekka	965700	
+Shenzhen	950500	
+Haora (Howrah)	950435	
+Karaj	940968	
+Taichung	940589	
+Varanasi (Benares)	929270	
+Patna	917243	
+Hohhot	916700	
+Srinagar	892506	
+Agra	891790	
+Mandalay	885300	
+Mosul	879000	
+Songnam	869094	
+Chiba	863930	
+Handan	840000	
+Wuxi	830000	
+Coimbatore	816321	
+Xuzhou	810000	
+Ahvaz	804980	
+Thane (Thana)	803389	
+Datong	800000	
+Yichun	800000	
+Sakai	797735	
+Allahabad	792858	
+Gaziantep	789056	
+Haiphong	783133	
+Puchon	779412	
+Qom	777677	
+Ulan Bator	773700	
+Benxi	770000	
+Luoyang	760000	
+Suwon	755550	
+Meerut	753778	
+Vishakhapatnam	752037	
+Jabalpur	741927	
+Tainan	728060	
+Cebu	718821	
+Malang	716862	
+Suzhou	710000	
+Hamhung	709730	
+Amritsar	708835	
+Faridabad	703592	
+Vijayawada	701827	
+Xining	700200	
+Huainan	700000	
+Kermanshah	692986	
+Gwalior	690765	
+Jixi	683885	
+Bandar Lampung	680332	
+Dubai	669181	
+Jodhpur	666279	
+Khulna	663340	
+Daqing	660000	
+Nashik (Nasik)	656925	
+Kumamoto	656734	
+Hubli-Dharwad	648298	
+Colombo	645000	
+Bekasi	644300	
+Fuxin	640000	
+Jerusalem	633700	
+Konya	628364	
+Amoy [Xiamen]	627500	
+Okayama	624269	
+Liuzhou	610000	
+Medina	608300	
+Solapur (Sholapur)	604215	
+Zamboanga	601794	
+Ranchi	599306	
+Kathmandu	591835	
+Anyang	591106	
+Bishkek	589400	
+Mersin (Içel)	587212	
+Bareilly	587211	
+Sagamihara	586300	
+Guwahati (Gauhati)	584342	
+Chongjin	582480	
+Shantou	580000	
+Shambajinagar (Aurangabad)	573272	
+Phnom Penh	570155	
+Jinzhou	570000	
+Mudanjiang	570000	
+Hamamatsu	568796	
+Nampo	566200	
+Antalya	564914	
+Cochin (Kochi)	564589	
+Chonju	563153	
+Quetta	560307	
+Rajkot	559407	
+Kagoshima	549977	
+Funabashi	545299	
+Yinchuan	544500	
+Ashgabat	540600	
+Kota	537371	
+Padang	534474	
+Vientiane	531800	
+Chongju	531376	
+Changzhou	530000	
+Zhangjiakou	530000	
+Islamabad	524500	
+Thiruvananthapuram (Trivandrum	524006	
+Dushanbe	524000	
+Panchiao	523850	
+Dandong	520000	
+Hegang	520000	
+Surakarta	518600	
+Koyang	518282	
+Higashiosaka	517785	
+Pimpri-Chinchwad	517083	
+Hachioji	513451	
+Ansan	510314	
+Kaifeng	510000	
+Jalandhar (Jullundur)	509510	
+Pohang	508899	
+Hims	507404	
+Gorakhpur	505566	
+Pasig	505058	
+Chandigarh	504094	
+Sanaa	503600	
+Niigata	497464	
+Jiamusi	493409	
+Liaoyang	492559	
+Hengyang	487148	
+Irbil	485968	
+Valenzuela	485433	
+Baoding	483155	
+Banjarmasin	482931	
+al-Dammam	482300	
+Hunjiang	482043	
+Chang-won	481694	
+Amagasaki	481434	
+Mysore	480692	
+Aligarh	480520	
+Diyarbakir	479884	
+Kayseri	475657	
+Himeji	475167	
+Shizuoka	473854	
+Xinxiang	473762	
+Las Piñas	472780	
+Guntur	471051	
+Antipolo	470866	
+Eskisehir	470781	
+Urawa	469675	
+Taguig	467375	
+Matsuyama	466133	
+Cagayan de Oro	461877	
+Matsudo	461126	
+Jamshedpur	460577	
+Huangshi	457601	
+Kanazawa	455386	
+Sargodha	455360	
+Haikou	454300	
+Ghaziabad	454156	
+Kawaguchi	452155	
+Yantai	452127	
+Parañaque	449811	
+Bengbu	449245	
+Warangal	447657	
+Makati	444867	
+Xiangtan	441968	
+Ichikawa	441893	
+Omiya	441649	
+Masan	441242	
+Utsunomiya	440353	
+Raipur	438639	
+Pekan Baru	438638	
+Macao	437500	
+Qaraghandy	436900	
+Urmia	435200	
+Denpasar	435000	
+Oita	433401	
+Nagasaki	432759	
+Yokosuka	430200	
+Moradabad	429214	
+Bacolod	429076	
+Weifang	428522	
+Durgapur	425836	
+Wuhu	425740	
+Pingxiang	425579	
+Kurashiki	425103	
+Yingkou	421589	
+Amravati	421576	
+Anyang	420332	
+Calicut (Kozhikode)	419831	
+Zahedan	419518	
+Yogyakarta	418944	
+Kirkuk	418624	
+Rasht	417748	
+Sialkot	417597	
+Bikaner	416289	
+al-Taif	416100	
+Panzhihua	415466	
+General Santos	411822	
+Bhubaneswar	411542	
+Pingdingshan	410775	
+Xiangfan	410407	
+Zhuzhou	409924	
+Pontianak	409632	
+Jiaozuo	409100	
+Gifu	408007	
+Kolhapur	406370	
+Basra	406296	
+Sanliurfa	405905	
+Kataka (Cuttack)	403418	
+Bahawalpur	403408	
+Hirakata	403151	
+Ajmer	402700	
+Bhavnagar	402338	
+Wenzhou	401871	
+Hamadan	401281	
+Zhangjiang	400997	
+Samarinda	399175	
+Abu Dhabi	398695	
+Aden	398300	
+Nishinomiya	397618	
+Toyonaka	396689	
+Zigong	393184	
+Chungho	392176	
+Wakayama	391233	
+Marikina	391170	
+al-Zarqa	389815	
+Tiruchirapalli	387223	
+Bhilai	386159	
+Shuangyashan	386081	
+Jambi	385201	
+Keelung (Chilung)	385201	
+Kerman	384991	
+Ipoh	382853	
+Da Nang	382674	
+Zaozhuang	380846	
+Arak	380755	
+Sanchung	380084	
+Dasmariñas	379520	
+Muntinlupa	379310	
+Bhiwandi	379070	
+Yakeshi	377869	
+Fukuyama	376921	
+Saharanpur	374945	
+Fujisawa	372840	
+Yichang	371601	
+Namangan	370500	
+Ulhasnagar	369077	
+Zhenjiang	368316	
+Salem	366712	
+Huaibei	366549	
+Iloilo	365820	
+Depok	365200	
+Hsinchuang	365048	
+Qinhuangdao	364972	
+Asahikawa	364813	
+Machida	364197	
+Guilin	364130	
+al-Sulaymaniya	364096	
+Liupanshui	363954	
+Nara	362812	
+Panjin	362773	
+Yangquan	362268	
+Ujjain	362266	
+Hsinchu	361958	
+Samarkand	361800	
+Takatsuki	361747	
+Iwaki	361737	
+Nagano	361391	
+Shymkent	360100	
+Toyohashi	360066	
+Jinxi	357052	
+Doha	355000	
+Pasay	354908	
+Liaoyuan	354141	
+Lianyungang	354139	
+Gaza	353632	
+Xianyang	352125	
+Kwangmyong	350914	
+Tai´an	350696	
+Chifeng	350077	
+Shaoguan	350043	
+Tel Aviv-Jaffa	348100	
+Toyota	346090	
+Suita	345750	
+Cimahi	344600	
+Hama	343361	
+Nantong	343341	
+Malegaon	342595	
+Jamnagar	341637	
+Leshan	341128	
+Ardebil	340386	
+Samsun	339871	
+Malabon	338855	
+Balikpapan	338752	
+Baoji	337765	
+Bokaro Steel City	333683	
+Takamatsu	332471	
+Manado	332288	
+Koriyama	330335	
+Malatya	330312	
+Chonan	330259	
+Taraz	330100	
+Chinju	329886	
+Sukkur	329176	
+Okazaki	328711	
+Johor Baharu	328436	
+Akola	328034	
+Kawagoe	327211	
+Yazd	326776	
+Belgaum	326399	
+Sinuiju	326011	
+Tokorozawa	325809	
+Toyama	325790	
+Rajahmundry	324851	
+Linyi	324720	
+Kochi	324710	
+Tonghua	324600	
+Iksan	322685	
+Kashiwa	320296	
+Sharja	320095	
+Chungli	318649	
+Andijon	318600	
+Fengshan	318562	
+Taizz	317600	
+Siping	317223	
+Changzhi	317144	
+Nellore	316606	
+Taoyuan	316438	
+San José del Monte	315807	
+Tengzhou	315083	
+Akita	314440	
+Chaozhou	313469	
+Pyongtaek	312927	
+Yangzhou	312892	
+Kumi	311431	
+Astana	311200	
+Öskemen	311000	
+al-Najaf	309010	
+Dongwan	308669	
+Udaipur	308571	
+Moulmein (Mawlamyine)	307900	
+New Bombay	307297	
+Mataram	306600	
+Bacoor	305699	
+Ma´anshan	305421	
+Bhatpara	304952	
+Gulbarga	304099	
+Miyazaki	303784	
+Foshan	303160	
+Yueyang	302800	
+Xingtai	302789	
+Pekalongan	301504	
+Koshigaya	301446	
+New Delhi	301297	
+Changde	301276	
+Jhansi	300850	
+Pavlodar	300500	
+Wonsan	300148	
+Naha	299851	
+Shihezi	299676	
+Gəncə	299300	
+Hodeida	298500	
+Yancheng	296831	
+Karbala	296705	
+Aomori	295969	
+Hakodate	294788	
+Rajshahi	294056	
+Tabuk	292600	
+Akashi	292253	
+Jhang	292214	
+Nonthaburi	292100	
+Gaya	291675	
+Jiujiang	291187	
+Qazvin	291117	
+Tegal	289744	
+Yokkaichi	288173	
+Fukushima	287525	
+Morioka	287353	
+Zanjan	286295	
+Bogor	285114	
+Iligan	285061	
+Maebashi	284473	
+Sumqayıt	283000	
+Kasugai	282348	
+Biên Hoa	282095	
+Otsu	282070	
+Dongying	281728	
+Shashi	281352	
+Xintai	281248	
+Jingdezhen	281183	
+Calamba	281146	
+Tongchuan	280657	
+Kakinada	279980	
+Ichihara	279280	
+Zhongshan	278829	
+Mandaluyong	278474	
+Dhule (Dhulia)	278317	
+Sanandaj	277808	
+Yao	276421	
+Uijongbu	276111	
+Panihati	275990	
+Nanded (Nander)	275083	
+Shiyan	273786	
+Bandar-e-Abbas	273578	
+Mangalore	273304	
+Kyongju	272968	
+Phyongsong	272934	
+Khorramabad	272815	
+Sheikhupura	271875	
+Ichinomiya	270828	
+Ciputat	270800	
+Larkana	270366	
+Dehra Dun	270159	
+Tokushima	269649	
+Semey	269600	
+al-Hilla	268834	
+Butuan	267279	
+Kamarhati	266889	
+Kunsan	266569	
+Kakogawa	266281	
+Davangere	266082	
+al-Nasiriya	265937	
+Haifa	265700	
+Tieli	265683	
+Eslamshahr	265450	
+Jining	265248	
+Chiayi	265109	
+Latakia	264563	
+Gebze	264170	
+Wuhai	264081	
+Angeles	263971	
+Hsintien	263603	
+Pondokgede	263200	
+Mianyang	262947	
+Luzhou	262892	
+Tarlac	262481	
+Asansol	262188	
+Zunyi	261862	
+Ibaraki	261020	
+Mandaue	259728	
+Cheju	258511	
+Shizuishan	257862	
+Neyagawa	257315	
+Shimonoseki	257263	
+Kimhae	256370	
+Neijiang	256012	
+Yamagata	255617	
+Tongliao	255129	
+Tieling	254842	
+Fukui	254818	
+Cirebon	254406	
+Petaling Jaya	254350	
+Hiratsuka	254207	
+Sariwon	254146	
+Denizli	253848	
+Kediri	253760	
+Bhagalpur	253225	
+Aqtöbe	253100	
+Baguio	252386	
+Wafangdian	251733	
+Anqing	250718	
+Gujrat	250121	
+Ambon	249312	
+Sunchon	249263	
+Burayda	248600	
+Batangas	247588	
+Mokpo	247452	
+Shaoyang	247227	
+Laiwu	246833	
+Chengde	246799	
+Sivas	246642	
+Mito	246559	
+Erzurum	246535	
+Tarsus	246206	
+Kahramanmaras	245772	
+Bellary	245391	
+Barddhaman (Burdwan)	245079	
+Tianshui	244974	
+Mardan	244511	
+Sasebo	244240	
+Rampur	243742	
+Kelang	243355	
+Nanyang	243303	
+Hachinohe	242979	
+Cangzhou	242708	
+Yong-in	242643	
+Cainta	242511	
+Jalgaon	242193	
+Kasur	241649	
+Muzaffarpur	241107	
+Nizamabad	241034	
+Yibin	241019	
+Kutaisi	240900	
+Muzaffarnagar	240609	
+Tripoli	240000	
+Huaiyin	239675	
+Takasaki	239124	
+Shimizu	239123	
+Patiala	238368	
+Shahjahanpur	237713	
+Qandahar	237500	
+Wonju	237460	
+Buhoro	237100	
+Kurnool	236800	
+Tiruppur (Tirupper)	235661	
+Kurume	235611	
+Kunpo	235233	
+Dunhua	235100	
+Chunchon	234528	
+Rohtak	233400	
+South Dum Dum	232811	
+Fuji	231527	
+Irbid	231511	
+San Pedro	231403	
+Yanji	230892	
+Jiangmen	230587	
+Navotas	230403	
+Haeju	229172	
+Namyangju	229060	
+Elâzig	228815	
+Rahim Yar Khan	228479	
+Kuala Terengganu	228119	
+Tongling	228017	
+Suihua	227881	
+Changhwa	227715	
+Yungho	227700	
+Mathura	226691	
+Gongziling	226569	
+Chandrapur	226105	
+al-Ayn	225970	
+al-Hufuf	225800	
+Tucheng	224897	
+Barahanagar (Baranagar)	224821	
+Kanggye	223410	
+Xiantao	222884	
+Cabanatuan	222859	
+Soka	222768	
+Osh	222700	
+Chaoyang	222394	
+San Fernando	221857	
+Qostanay	221400	
+Nha Trang	221331	
+Fuchu	220576	
+Kangnung	220403	
+Ganzhou	220129	
+Pinang	219603	
+Kota Bharu	219582	
+Van	219319	
+Hue	219149	
+al-Mubarraz	219100	
+Jember	218500	
+Lipa	218447	
+Darbhanga	218391	
+Huzhou	218071	
+Baicheng	217987	
+Khamis Mushayt	217900	
+Borujerd	217804	
+Lapu-Lapu	217019	
+Siliguri (Shiliguri)	216950	
+Chigasaki	216015	
+Can Tho	215587	
+Raurkela	215489	
+Ambattur	215424	
+Shangzi	215373	
+Panipat	215218	
+Yangjiang	215196	
+Firozabad	215128	
+Qitaihe	214957	
+Ichalkaranji	214950	
+Jammu	214737	
+Pingtung	214727	
+Ramagundam	214384	
+Gejiu	214294	
+Jiangyin	213659	
+Hebi	212976	
+Eluru	212866	
+Atsugi	212407	
+Gjumri	211700	
+Jiaxing	211526	
+Numazu	211382	
+Sultanbeyli	211068	
+Wuzhou	210452	
+Brahmapur	210418	
+Izmit (Kocaeli)	210068	
+Ageo	209442	
+Cam Pha	209086	
+Meihekou	209038	
+Xuchang	208815	
+al-Amara	208797	
+Yamato	208234	
+San Pablo	207927	
+Liaocheng	207844	
+Sahiwal	207388	
+Manisa	207148	
+Cilacap	206900	
+Matsumoto	206801	
+Kure	206504	
+Abadan	206073	
+Takarazuka	205993	
+Haicheng	205560	
+Qianjiang	205504	
+Chungju	205206	
+Cimanggis	205100	
+Alwar	205086	
+Baiyin	204970	
+Bei´an	204899	
+Batman	203793	
+Petropavl	203500	
+Pondicherry	203065	
+Pematang Siantar	203056	
+Dehiwala	203000	
+Dezful	202639	
+Purwokerto	202500	
+Narayanganj	202134	
+Thanjavur	202013	
+Kasukabe	201838	
+Chofu	201585	
+Kashan	201372	
+Bihar Sharif	201323	
+Biñan	201186	
+Okara	200901	
+Yixing	200824	
+Odawara	200171	
+Tuticorin	199854	
+Kofu	199753	
+Kuantan	199484	
+Laizhou	198664	
+Imphal	198535	
+Wah	198400	
+Taytay	198183	
+Kushiro	197608	
+Qaramay	197602	
+Acheng	197595	
+Latur	197408	
+Kishiwada	197276	
+Hitachi	196622	
+al-Diwaniya	196519	
+Balikesir	196382	
+Lucena	196075	
+Sari	195882	
+Oral	195500	
+Dezhou	195485	
+Imus	195482	
+Sagar	195346	
+Nanping	195064	
+Nicosia	195000	
+Zhaoqing	194784	
+Farrukhabad-cum-Fatehgarh	194567	
+Beipiao	194301	
+Olongapo	194260	
+Karsi	194100	
+Nukus	194100	
+Fengcheng	193784	
+Sangli	193197	
+Yungkang	193005	
+Fuyu	192981	
+al-Ramadi	192556	
+Xinyang	192509	
+Nagaoka	192407	
+Dongtai	192247	
+Rangpur	191398	
+Yuci	191356	
+Pegu (Bago)	190900	
+Itami	190886	
+Honghu	190772	
+Sakarya (Adapazari)	190641	
+Parbhani	190255	
+Ezhou	190123	
+Kükon	190100	
+Nagar Coil	190084	
+Moratuwa	190000	
+Heze	189293	
+Chärjew	189200	
+Uji	188735	
+Mymensingh	188713	
+Gorgan	188710	
+Andong	188443	
+Pingchen	188344	
+Rishon Le Ziyyon	188200	
+Daxian	188101	
+Dera Ghazi Khan	188100	
+Binangonan	187691	
+Ciomas	187400	
+Linfen	187309	
+Bijapur	186939	
+Herat	186800	
+Tianmen	186332	
+Yiyang	185818	
+Santa Rosa	185633	
+Kukatpalle	185378	
+Quanzhou	185154	
+Rizhao	185048	
+Mirpur Khas	184500	
+Bally	184474	
+Suzuka	184061	
+Bhilwara	183965	
+Bassein (Pathein)	183900	
+Yosu	183596	
+Ratlam	183375	
+Taiping	183261	
+Avadi	183215	
+al-Kut	183183	
+Nawabshah	183100	
+Seremban	182869	
+Deyang	182488	
+Dindigul	182477	
+Guangyuan	182241	
+Changshu	181805	
+Zhangzhou	181424	
+Nakhon Ratchasima	181400	
+Ahmadnagar	181339	
+Hailar	180650	
+Fargona	180500	
+Nanchong	180273	
+Jiutai	180130	
+Zhaodong	179976	
+Bilaspur	179833	
+Shaoxing	179818	
+Tasikmalaya	179800	
+Fuyang	179572	
+Tagum	179531	
+Shimoga	179258	
+Kimchaek	179000	
+Maoming	178683	
+Qujing	178669	
+Tacloban	178639	
+Najafabad	178498	
+Hyesan	178020	
+Kharagpur	177989	
+Hirosaki	177522	
+Ghulja	177193	
+Hail	176800	
+Jiaohe	176367	
+Puyang	175988	
+Huadian	175873	
+Jiangyou	175753	
+Mira Bhayandar	175372	
+Malolos	175291	
+Ube	175206	
+Vellore	175061	
+Jalna	174985	
+Kodaira	174984	
+Burnpur	174933	
+Anantapur	174924	
+Allappuzha (Alleppey)	174666	
+Qashqar	174570	
+Mingora	174500	
+Takaoka	174380	
+Tirupati	174369	
+Anshun	174142	
+Fuling	173878	
+Karnal	173751	
+Kyongsan	173746	
+Obihiro	173685	
+Xinyu	173524	
+Burhanpur	172710	
+Vanadzor	172700	
+Hisar (Hissar)	172677	
+Tiruvottiyur	172562	
+Tomakomai	171958	
+Tali	171940	
+Nam Dinh	171699	
+Madiun	171532	
+Kaesong	171500	
+Chiang Mai	171100	
+Mabalacat	171045	
+Sabzevar	170738	
+Temirtau	170500	
+Barisal	170232	
+Saga	170034	
+Hanzhong	169930	
+Danyang	169603	
+Chenzhou	169400	
+Mirzapur-cum-Vindhyachal	169336	
+Chiniot	169300	
+Tungi	168702	
+Sakura	168072	
+Kamakura	167661	
+Secunderabad	167461	
+Mitaka	167268	
+Nadiad	167051	
+Izumi	166979	
+Hino	166770	
+Hadano	166512	
+Xiaogan	166280	
+Khomeynishahr	165888	
+Taiping	165524	
+Ashikaga	165243	
+Shangqiu	164880	
+Zhuhai	164747	
+Qingyuan	164641	
+Tsu	164543	
+Dewas	164364	
+Aqsu	164092	
+Cotabato	163849	
+Beerseba	163700	
+Jining	163552	
+Murwara (Katni)	163431	
+Quy Nhon	163385	
+Paju	163379	
+Yangsan	163351	
+Holon	163100	
+Meycauayan	163037	
+Xiaoshan	162930	
+Sayama	162472	
+Zaoyang	162198	
+Puerto Princesa	161912	
+Xinghua	161910	
+Pate	161700	
+Khujand	161500	
+Ganganagar	161482	
+Hami	161315	
+Yachiyo	161222	
+Fengyuan	161032	
+Huizhou	161023	
+Jinmen	160794	
+Tsukuba	160768	
+Sanming	160691	
+Luchou	160516	
+Vizianagaram	160359	
+Ulanhot	159538	
+Tachikawa	159430	
+Petah Tiqwa	159400	
+Korla	159344	
+Erode	159232	
+Machilipatnam (Masulipatam)	159110	
+Amol	159092	
+Bhatinda (Bathinda)	159042	
+Neyshabur	158847	
+Babol	158346	
+Udon Thani	158100	
+Biratnagar	157764	
+Raichur	157551	
+Qyzylorda	157400	
+Agartala	157358	
+Kumagaya	157171	
+Arrah (Ara)	157082	
+Legazpi	157010	
+Wanxian	156823	
+Satna	156630	
+Rui´an	156468	
+Zhoushan	156317	
+Liangcheng	156307	
+Silang	156137	
+Moriguchi	155941	
+Ashdod	155800	
+Otaru	155784	
+Lalbahadur Nagar	155500	
+Rustavi	155400	
+Ichon	155332	
+Aizawl	155240	
+Uluberia	155172	
+al-Sib	155000	
+Hsichuh	154976	
+Netanya	154900	
+Asan	154663	
+Limassol	154400	
+Katihar	154367	
+Ormoc	154297	
+San Carlos	154264	
+Anjo	153823	
+Jiaozhou	153364	
+Cuddalore	153086	
+Iskenderun	153022	
+Narashino	152849	
+Oyama	152820	
+Taizhou	152442	
+al-Kharj	152100	
+Suzhou	151862	
+Hugli-Chinsurah	151806	
+Dhanbad	151789	
+Ogaki	151758	
+Yichun	151585	
+Shulin	151260	
+Raiganj	151045	
+Kamoke	151000	
+Sambhal	150869	
+Durg	150645	
+Taonan	150168	
+Pingdu	150123	
+Munger (Monghyr)	150112	
+Kanchipuram	150100	
+North Dum Dum	149965	
+Mandi Burewala	149900	
+Matsue	149821	
+Kawanishi	149794	
+Kabankalan	149769	
+Jaffna	149000	
+Khoy	148944	
+Hat Yai	148632	
+Karimnagar	148583	
+Ji´an	148583	
+Bharatpur	148519	
+Longkou	148362	
+Sikar	148272	
+Talisay	148110	
+Langfang	148105	
+Kuching	148059	
+Hitachinaka	148006	
+al-Manama	148000	
+Valencia	147924	
+Niiza	147744	
+Nagareyama	147738	
+Koje	147562	
+Tottori	147523	
+Hardwar (Haridwar)	147305	
+Dabgram	147217	
+Calbayog	147187	
+Morena	147124	
+Kimchon	147027	
+Tama	146712	
+Nonsan	146619	
+Noida	146514	
+Bengkulu	146439	
+Circik	146400	
+Pokhara	146318	
+Zhoukou	146288	
+Hapur	146262	
+Suining	146086	
+Osmaniye	146003	
+Iruma	145922	
+Lalitapur	145847	
+Jhelum	145800	
+Çorum	145495	
+Ota	145317	
+Vung Tau	145145	
+Bhusawal	145143	
+Khandwa	145133	
+Karawang	145000	
+Kütahya	144761	
+Yulin	144467	
+Malayer	144373	
+Yamuna Nagar	144346	
+al-Qamishliya	144286	
+Santa Maria	144282	
+Jinhua	144280	
+Liu´an	144248	
+Hatay (Antakya)	143982	
+Sonipat (Sonepat)	143922	
+Tenali	143726	
+Bushehr	143641	
+Banda Aceh	143409	
+Aqtau	143400	
+Qaemshahr	143286	
+Omuta	142889	
+Palu	142800	
+Qarchak	142690	
+Shuangcheng	142659	
+Pagadian	142515	
+Atyrau	142500	
+Suizhou	142302	
+Kuri	142173	
+Ankang	142170	
+Kirikkale	142044	
+Cadiz	141954	
+Dashhowuz	141800	
+Bago	141721	
+al-Khubar	141700	
+Adiyaman	141529	
+Sadiqabad	141500	
+Toledo	141174	
+Rach Gia	141132	
+Jubayl	140800	
+Margilon	140800	
+Dayr al-Zawr	140459	
+Raurkela Civil Township	140408	
+Weinan	140169	
+Kandy	140000	
+Kollam (Quilon)	139852	
+Komaki	139827	
+Jessore	139710	
+Kumbakonam	139483	
+Longjing	139417	
+Ome	139216	
+Ingraj Bazar (English Bazar)	139204	
+Chong-up	139111	
+Da´an	138963	
+Kadoma	138953	
+Timkur	138903	
+Ürgenc	138900	
+Monywa	138600	
+Jaramana	138469	
+Qods	138278	
+Trabzon	138234	
+Yamaguchi	138210	
+Lengshuijiang	137994	
+Naga	137810	
+Hafar al-Batin	137800	
+Batumi	137700	
+Jacobabad	137700	
+Sittwe (Akyab)	137600	
+al-Rusayfa	137247	
+Laiyang	137080	
+Chechon	137070	
+Amroha	137061	
+Serampore	137028	
+Bat Yam	137000	
+Higashimurayama	136970	
+Chapra	136877	
+Pali	136842	
+Xianning	136811	
+Maunath Bhanjan	136697	
+Dali	136554	
+Yonago	136461	
+Anda	136446	
+Jincheng	136396	
+Adoni	136182	
+Jaunpur	136062	
+Tirunelveli	135825	
+San Mateo	135603	
+Bahraich	135400	
+Comilla	135313	
+Sirjan	135024	
+Matsubara	135010	
+Bojnurd	134835	
+Sosan	134746	
+Longyan	134481	
+Musashino	134426	
+Xichang	134419	
+Tsuchiura	134072	
+Gadag Betigeri	134051	
+Pasuruan	134019	
+Panabo	133950	
+Proddatur	133914	
+Wendeng	133910	
+Bene Beraq	133900	
+Koronadal	133786	
+Ordu	133642	
+Hailun	133565	
+Binzhou	133555	
+Joetsu	133505	
+Chittoor	133462	
+Shihung	133443	
+Shikarpur	133300	
+Barrackpur	133265	
+Miyakonojo	133183	
+Linhe	133183	
+Bharuch (Broach)	133102	
+Wuwei	133101	
+Khanewal	133000	
+Duyun	132971	
+Misato	132957	
+Mishan	132744	
+Naihati	132701	
+Long Xuyen	132681	
+Shangrao	132455	
+Maragheh	132318	
+Changji	132260	
+Meixian	132156	
+Yushu	131861	
+Kakamigahara	131831	
+Salala	131813	
+Tiefa	131807	
+Shillong	131719	
+Tong-yong	131717	
+Taunggyi (Taunggye)	131500	
+Kongju	131229	
+Duma	131158	
+Huai´an	131149	
+Sambalpur	131138	
+Yongju	131097	
+Marawi	131090	
+Daito	130594	
+Nawabganj	130577	
+Junagadh	130484	
+Seto	130470	
+Dagupan	130328	
+al-Salimiya	130215	
+Hafizabad	130200	
+Leiyang	130115	
+Zalantun	130031	
+Rae Bareli	129904	
+Battambang	129800	
+Sagay	129765	
+Meikhtila	129700	
+Kupang	129300	
+Tebing Tinggi	129300	
+Percut Sei Tuan	129000	
+Rewa	128981	
+Weihai	128888	
+Aydin	128651	
+Gurgaon	128608	
+Loudi	128418	
+Qingzhou	128258	
+Usak	128162	
+Angren	128000	
+Khammam	127992	
+Kariya	127969	
+Dinajpur	127815	
+Mazar-e-Sharif	127800	
+Thai Nguyen	127643	
+Birjand	127608	
+Urayasu	127550	
+Beppu	127486	
+Hong Gai	127484	
+Binjai	127222	
+Niihama	127207	
+Bulandshahr	127201	
+Ekibastuz	127200	
+Minoo	127026	
+Ramat Gan	126900	
+Fujieda	126897	
+Qidong	126872	
+Huaihua	126785	
+Abiko	126670	
+Khon Kaen	126500	
+Luohe	126438	
+Yuanlin	126402	
+Sibu	126381	
+Roxas	126352	
+Ilam	126346	
+Yangmei	126323	
+Navsari	126089	
+Malkajgiri	126066	
+Pak Kret	126055	
+Chinhae	125997	
+Sandakan	125841	
+Sukabumi	125766	
+al-Tuqba	125700	
+Lubao	125699	
+Nobeoka	125547	
+Midnapore (Medinipur)	125498	
+Miraj	125407	
+Raj Nandgaon	125371	
+Chuzhou	125341	
+Kohat	125300	
+Alandur	125244	
+Puri	125199	
+Digos	125171	
+Tondabayashi	125094	
+Navadwip	125037	
+Sirsa	125000	
+Cizah	124800	
+Korba	124501	
+Faizabad	124437	
+Alor Setar	124412	
+Waru	124300	
+Selayang Baru	124228	
+Kaiyuan	124219	
+Ueda	124217	
+Sangju	124116	
+Etawah	124072	
+Kashihara	124013	
+Pangkal Pinang	124000	
+Linqing	123958	
+Pathankot	123930	
+San Miguel	123824	
+Magelang	123800	
+Nakhon Sawan	123800	
+Chaohu	123676	
+Malaybalay	123672	
+Matsusaka	123582	
+Kökshetau	123400	
+Edirne	123383	
+Laohekou	123366	
+Gandhinagar	123359	
+Dujiangyan	123357	
+Çorlu	123300	
+Palghat (Palakkad)	123289	
+Isesaki	123285	
+Zhumadian	123232	
+Khan Yunis	123175	
+Veraval	123000	
+Hoshiarpur	122705	
+Mergui (Myeik)	122700	
+Poryong	122604	
+Blitar	122600	
+Ambala	122596	
+Serang	122400	
+al-Mukalla	122400	
+Kwang-yang	122052	
+Zama	122046	
+Kisarazu	121967	
+Linchuan	121949	
+Isparta	121911	
+Sitapur	121842	
+Bhiwani	121629	
+Muzaffargarh	121600	
+Miryang	121501	
+Cuddapah	121463	
+Jiaonan	121397	
+Bhimavaram	121314	
+Krishnanagar	121110	
+Noda	121030	
+Ishinomaki	120963	
+Probolinggo	120770	
+Tuguegarao	120645	
+Sanmenxia	120523	
+Chandannagar	120378	
+Mandya	120265	
+Bogra	120170	
+Dibrugarh	120127	
+Heyuan	120101	
+Manzhouli	120023	
+Bukan	120020	
+Lhasa	120000	
+Ilagan	119990	
+Nandyal	119813	
+Yanbu	119800	
+Balurghat	119796	
+Fujinomiya	119714	
+Baliuag	119675	
+Kawachinagano	119666	
+Hebron	119401	
+Imabari	119357	
+Aizuwakamatsu	119287	
+Higashihiroshima	119166	
+Habikino	118968	
+Lianyuan	118858	
+Ebetsu	118805	
+Hofu	118751	
+Kuytun	118553	
+Surigao	118534	
+Kiryu	118326	
+Karabük	118285	
+San Carlos	118259	
+Kilis	118245	
+Neyveli	118080	
+Sri Jayawardenepura Kotte	118000	
+Khanpur	117800	
+Okinawa	117748	
+San Juan del Monte	117680	
+Fatehpur	117675	
+Tanauan	117539	
+Sylhet	117396	
+Alanya	117300	
+Puqi	117264	
+Yaizu	117258	
+Cilegon	117000	
+Masjed-e-Soleyman	116883	
+Mahbubnagar	116833	
+Budaun	116695	
+Porbandar	116671	
+Ubon Ratchathani	116300	
+Navoi	116300	
+Hongjiang	116188	
+Taliao	115897	
+Hanam	115812	
+Toyokawa	115781	
+Ebina	115571	
+Silchar	115483	
+Kimje	115427	
+Saqqez	115394	
+Concepcion	115171	
+Rodriguez (Montalban)	115167	
+Berhampore (Baharampur)	115144	
+Gojra	115000	
+Purnea (Purnia)	114912	
+Olmalik	114900	
+Bankura	114876	
+Asaka	114815	
+Sungai Petani	114763	
+Qinzhou	114586	
+Sariaya	114568	
+Baquba	114516	
+Ajman	114395	
+Cianjur	114300	
+Renqiu	114256	
+Phan Thiêt	114236	
+Rajapalaiyam	114202	
+Titagarh	114085	
+Yuyao	114065	
+Cam Ranh	114041	
+Halisahar	114028	
+Guigang	114025	
+Kaili	113958	
+Jabaliya	113901	
+Yongchon	113511	
+Sachon	113494	
+Hathras	113285	
+Yan´an	113277	
+Malasiqui	113190	
+Beihai	112673	
+Xuangzhou	112673	
+Vinh	112455	
+General Mariano Alvarez	112446	
+Bhir (Bid)	112434	
+Quzhou	112373	
+Abha	112300	
+Kueishan	112195	
+Kiziltepe	112000	
+Tanshui	111882	
+Pallavaram	111866	
+Yong´an	111762	
+Sohumi	111700	
+Higashikurume	111666	
+Ikoma	111645	
+Urdaneta	111582	
+Zonguldak	111542	
+Ciparay	111500	
+Hagonoy	111425	
+Kitami	111295	
+Gonbad-e Qabus	111253	
+Saveh	111245	
+Taitung	111039	
+San Jose	111009	
+Koganei	110969	
+Polomolok	110709	
+Santiago	110531	
+Tanza	110517	
+Ozamis	110420	
+Anand	110266	
+Zixing	110048	
+Iwatsuki	110034	
+Mango	110024	
+Santipur	109956	
+Bhind	109755	
+Mishima	109699	
+Lhokseumawe	109600	
+Bahawalnagar	109600	
+Liyang	109520	
+Rudnyy	109500	
+Termiz	109500	
+Mexico	109481	
+Gondiya	109470	
+Yizheng	109268	
+Yumen	109234	
+Tiruvannamalai	109196	
+Brahmanbaria	109032	
+Uiwang	108788	
+Handa	108600	
+Muridke	108600	
+Yeotmal (Yavatmal)	108578	
+Kulti-Barakar	108518	
+Liling	108504	
+Hualien	108407	
+My Tho	108404	
+Yuncheng	108359	
+Moga	108304	
+Shivapuri	108277	
+Muroran	108275	
+San Jose	108254	
+Ara´ar	108100	
+al-Raqqa	108020	
+Bidar	108016	
+Komatsu	107937	
+Shanwei	107847	
+Naju	107831	
+Pak Pattan	107800	
+Mahabad	107799	
+Silay	107722	
+General Trias	107691	
+Yatsushiro	107661	
+Lashio (Lasho)	107600	
+Guntakal	107592	
+Iida	107583	
+Bawshar	107500	
+Unnao	107425	
+Barasat	107365	
+Cixi	107329	
+Varamin	107233	
+Tambaram	107187	
+Tabaco	107166	
+Abohar	107163	
+Siirt	107100	
+Tokuyama	107078	
+Yuanjiang	107004	
+Taman	107000	
+Kokubunji	106996	
+Andimeshk	106923	
+Akishima	106914	
+Depok	106800	
+Iwakuni	106647	
+Cabuyao	106630	
+Pilibhit	106605	
+Valparai	106523	
+Da Lat	106409	
+Viransehir	106400	
+Bozhou	106346	
+Kusatsu	106232	
+Kuwana	106121	
+Gonda	106078	
+Tekirdag	106077	
+Tangail	106004	
+Abottabad	106000	
+Surendranagar	105973	
+Calapan	105910	
+Mati	105908	
+Midsayap	105760	
+Prome (Pyay)	105700	
+Sanda	105643	
+Khorramshahr	105636	
+Hikone	105508	
+Qutubullapur	105380	
+Beawar	105363	
+Jinchang	105287	
+Fu´an	105265	
+Citeureup	105100	
+Siem Reap	105100	
+Suqian	105021	
+Shahrud	104765	
+Nantou	104723	
+Henzada (Hinthada)	104700	
+Hindupur	104651	
+Gandhidham	104585	
+Shishou	104571	
+Hengshui	104269	
+Karaman	104200	
+Haldwani-cum-Kathgodam	104195	
+Afyon	103984	
+Toda	103969	
+Cauayan	103952	
+Myingyan	103600	
+Tellicherry (Thalassery)	103579	
+Marv Dasht	103579	
+Jamalpur	103556	
+Namwon	103544	
+Pemalang	103500	
+Tando Adam	103400	
+Klaten	103300	
+Ibb	103300	
+Jaranwala	103300	
+Pabna	103277	
+Danjiangkou	103211	
+Tajimi	103171	
+Fujin	103104	
+Lungtan	103088	
+Salatiga	103000	
+Wardha	102985	
+Sanya	102820	
+Guangshui	102770	
+Ikeda	102710	
+Aksaray	102681	
+Rishra	102649	
+Huangshan	102628	
+Ceyhan	102412	
+Xingcheng	102384	
+Gingoog	102379	
+Erzincan	102304	
+Dumaguete	102265	
+Khairpur	102200	
+Jalib al-Shuyukh	102178	
+Bhuj	102176	
+Fukaya	102156	
+Zhucheng	102134	
+San Fernando	102082	
+Kunshan	102052	
+Shah Alam	102019	
+Arayat	101792	
+Ise	101732	
+Chishtian Mandi	101700	
+Modinagar	101660	
+Gudivada	101656	
+Sakata	101651	
+Daska	101500	
+Basirhat	101409	
+Bismil	101400	
+Bayawan (Tulong)	101391	
+Kasuga	101344	
+Cibinong	101300	
+Naogaon	101266	
+Kidapawan	101205	
+Daraga (Locsin)	101031	
+Marilao	101017	
+Mary	101000	
+Zabol	100887	
+Uttarpara-Kotrung	100867	
+Ongole	100836	
+Kamagaya	100821	
+Tsuruoka	100713	
+North Barrackpur	100513	
+Guna	100490	
+Haining	100478	
+Shahr-e Kord	100477	
+Haldia	100347	
+Hoya	100313	
+Nablus	100231	
+Habra	100223	
+Kanchrapara	100194	
+Tonk	100079	
+Nishio	100032	
+Malita	100000	
+Negombo	100000	
+Nazilli	99900	
+Dipolog	99862	
+Tokai	99738	
+Palangka Raya	99693	
+Sirajganj	99669	
+Tokat	99500	
+Cavite	99367	
+Pingliang	99265	
+Fuqing	99193	
+al-Qatif	98900	
+Touliu	98900	
+Champdani	98818	
+Danao	98781	
+Inazawa	98746	
+Xinzhou	98667	
+Orai	98640	
+Pudukkottai	98619	
+Dadu	98600	
+Jieyang	98531	
+Bandar-e Anzali	98500	
+Narsinghdi	98342	
+Rafsanjan	98300	
+Sakado	98221	
+Sasaram	98220	
+Isehara	98123	
+Taldyqorghan	98000	
+Zhangjiagang	97994	
+Bislig	97860	
+Hazaribag	97712	
+Palayankottai	97662	
+Takasago	97632	
+Talavera	97329	
+Mandi Bahauddin	97300	
+Banda	97227	
+Tong Xian	97168	
+Buon Ma Thuot	97044	
+Fujimi	96972	
+Guagua	96858	
+Godhra	96813	
+Tavoy (Dawei)	96800	
+Tsaotun	96800	
+Saidpur	96777	
+Gazipur	96717	
+Savannakhet	96652	
+Mojokerto	96626	
+Bayambang	96609	
+Marand	96400	
+Hospet	96322	
+Ashoknagar-Kalyangarh	96315	
+Achalpur	96216	
+Nasugbu	96113	
+Patan	96109	
+Urasoe	96002	
+Ahmadpur East	96000	
+Purwakarta	95900	
+Ya´an	95900	
+Garut	95800	
+Jinzhou	95761	
+Mandasor	95758	
+Damoh	95661	
+Baybay	95630	
+Yonezawa	95592	
+Konan	95521	
+Tonghae	95472	
+Kudus	95300	
+Kamalia	95300	
+Capas	95219	
+Yamatokoriyama	95165	
+Satara	95133	
+Songkhla	94900	
+Meerut Cantonment	94876	
+Sultan Kudarat	94861	
+Kendari	94800	
+Pagakku (Pakokku)	94800	
+Maizuru	94784	
+Jaya Pura	94700	
+Torbat-e Heydariyeh	94600	
+Dehri	94526	
+Laoag	94466	
+Delhi Cantonment	94326	
+Jahrom	94200	
+Nakhon Pathom	94100	
+Gorontalo	94058	
+Emeishan	94000	
+Mingəçevir	93900	
+al-Hawiya	93900	
+Onomichi	93756	
+Chhindwara	93731	
+Bayugan	93623	
+Bansberia	93447	
+Nagaon	93350	
+Higashimatsuyama	93342	
+Malungon	93232	
+Kimitsu	93216	
+Majalaya	93200	
+Kanpur Cantonment	93109	
+Khuzdar	93100	
+Isahaya	93058	
+Enshi	93056	
+Kanuma	93053	
+Bose	93009	
+Kars	93000	
+Vidisha	92917	
+Yuzhou	92889	
+Pondok Aren	92700	
+Santa Cruz	92694	
+Jombang	92600	
+Bettiah	92583	
+Izumisano	92583	
+Purulia	92574	
+Sorsogon	92512	
+Candelaria	92429	
+Kameoka	92398	
+Sunggal	92300	
+Ashqelon	92300	
+Vihari	92300	
+Mun-gyong	92239	
+Kangshan	92200	
+Rafah	92020	
+Ilan	92000	
+Kaiyuan	91999	
+Batam	91871	
+Mobara	91664	
+Tumen	91471	
+Narita	91470	
+Kashiwazaki	91229	
+Padang Sidempuan	91200	
+Tsuyama	91170	
+Sawangan	91100	
+Unayza	91100	
+Idlib	91081	
+Semnan	91045	
+Putian	91030	
+Najran	91000	
+Linhai	90870	
+Suhar	90814	
+Hassan	90803	
+Ambala Sadar	90712	
+Xilin Hot	90646	
+Birgunj	90639	
+Ligao	90603	
+Baidyabati	90601	
+Inegöl	90500	
+Dera Ismail Khan	90400	
+Morvi	90357	
+Rehovot	90300	
+Shaowu	90286	
+Junan	90222	
+Bandirma	90200	
+Miandoab	90100	
+Zhezqazghan	90000	
+Miaoli	90000	
+Banyuwangi	89900	
+Tanjung Pinang	89900	
+Qomsheh	89800	
+Wazirabad	89700	
+Huaying	89400	
+Nowshera	89400	
+Pingyi	89373	
+Huangyan	89288	
+Raigarh	89166	
+Wadi al-Sir	89104	
+Vejalpur	89053	
+Male	71000	
+Masqat	51969	
+Dili	47900	
+Kuwait	28859	
+Thimphu	22000	
+Bandar Seri Begawan	21484	
